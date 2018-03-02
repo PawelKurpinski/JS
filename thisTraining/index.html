@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wtf is this "this" ;)</title>
+</head>
+<body>
+  
+
+<script>
+
+  // dwie funkcje, które zostaną wywołane poniżej wraz z przekazaniem obiektów ja i ty
+
+  function identyfikuj() {
+      return this.name.toUpperCase();
+  }
+
+  function mow() {
+      var pozdrowienie = "Witaj, jestem " + identyfikuj.call(this);
+  }
+
+// dwa obiekty
+
+  var ja = {
+    name: "Paweł"
+  }
+
+  var ty = {
+    name: "Czytelnik"
+  }
+
+// wywołanie funkcji UWAGA! .call to metoda do przekazania obiektu
+
+alert(identyfikuj.call(me));
+
+alert(mow.call(me));
+
+
+</script>
+</body>
+</html>
