@@ -40,7 +40,7 @@ alert(mow.call(ja));
 
 
 function baz() {
-    // Stos wywołań to: 'baz', więc ródło wywołania
+    // Stos wywołań to: 'baz', więc źródło wywołania
     // funkcji znajduje się w zakresie globalnym.
 
     console.log( "baz" );
@@ -48,7 +48,7 @@ function baz() {
 }
 
 function bar() {
-    // Stos wywołań to: 'baz' -> 'bar', więc ródło wywołania
+    // Stos wywołań to: 'baz' -> 'bar', więc źródło wywołania
     // funkcji znajduje się w 'baz'.
 
     console.log( "bar" );
@@ -62,7 +62,7 @@ function foo() {
     console.log( "foo" );
 }
 
-baz(); // <-- ródło wywołania funkcji 'baz'.
+baz(); // <-- źródło wywołania funkcji 'baz'.
 
 
 
