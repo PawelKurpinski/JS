@@ -15,6 +15,5 @@ function draw() {
         };
         $( "div.chessBoard" ).append('<div style="clear:both"></div>');
     };
-  
 };
 draw();
