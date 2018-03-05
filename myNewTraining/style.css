@@ -1,0 +1,18 @@
+.tile
+{
+	width: 64px;
+	height: 64px;
+    float: left;
+    background-color: black;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+.tileW
+{
+	width: 64px;
+	height: 64px;
+    float: left;
+    background-color: whi;
+    margin-left: 1px;
+    margin-top: 1px;
+}
