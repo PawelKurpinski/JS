@@ -27,7 +27,7 @@ var clickEvent = function () {
         var dataI = parseInt($clikedFiled.attr("data-i"));
         var dataJ = parseInt($clikedFiled.attr("data-j"));
         
-        alert("pole"+ dataJ + ',' + dataI + "zostało clicknięte");
+        alert("To pole o wpółrzędnych "+ dataJ + ', ' + dataI);
     })
 }
 
