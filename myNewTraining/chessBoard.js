@@ -22,12 +22,12 @@ var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 
 var clickEvent = function () {
-    $(".tile",".tileW").click(function () {
+    $(".tile, .tileW").click(function () {
         var $clikedFiled = $(this);
         var dataI = parseInt($clikedFiled.attr("data-i"));
         var dataJ = parseInt($clikedFiled.attr("data-j"));
-
-        console.log(dataI, dataJ);
+        
+        alert("pole"dataJ + ',' + dataI + "zostało clicknięte");
     })
 }
 
