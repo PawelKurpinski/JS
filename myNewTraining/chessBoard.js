@@ -6,6 +6,39 @@ if (jQuery) {
 var rows = [0, 1, 2, 3, 4, 5, 6, 7];
 var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
+
+
+var addClickEvents = function () {
+    $(".tile, .tileW").click(function () {
+        var $clickedField = $(this);
+        var dataI = parseInt($clickedField.attr("data-i"));
+        var dataJ = parseInt($clickedField.attr("data-j"));
+        
+        alert("To pole o wpółrzędnych "+ dataJ + ', ' + dataI);
+    })
+}
+
+
+function drawChessBoard() {
+        for (let i = 0; i < rows.length; i++) {
+            for (var j = 0; j < cols.length; j++) {
+                var c = "";
+                if ((((i==0 ||i%2==0) && j%2==0)) || ((i%2!=0 && j%2!=0))) {
+                    c="blackTile";
+                } else {
+                    c="whiteTile";
+                }
+                var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
+                $("div.chessBoard").append(field);
+            };
+            $("div.chessBoard").append('<div style="clear:both"></div>');
+        };
+        addClickEvents();
+};
+drawChessBoard()
+
+
+
 // function draw() {
 //     for (let i = 0; i < rows.length; i++) {
 //         for (var j = 0; j < cols.length; j++) {
@@ -19,32 +52,3 @@ var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 //     };
 // };
 // draw()
-
-
-var clickEvent = function () {
-    $(".tile, .tileW").click(function () {
-        var $clikedFiled = $(this);
-        var dataI = parseInt($clikedFiled.attr("data-i"));
-        var dataJ = parseInt($clikedFiled.attr("data-j"));
-        
-        alert("To pole o wpółrzędnych "+ dataJ + ', ' + dataI);
-    })
-}
-
-
-function draw() {
-    for (let i = 0; i < rows.length; i++) {
-        for (var j = 0; j < cols.length; j++) {
-            if ((((i==0 ||i%2==0) && j%2==0)) || ((i%2!=0 && j%2!=0))) {
-                var field = $("<div.chessBoard>").addClass("tile").html([i][j]).attr("data-i", i).attr("data-j", j);
-                $("div.chessBoard").append(field);
-            } else {
-                var fieldTwo = $("<div.chessBoard>").addClass("tileW").html([i][j]).attr("data-i", i).attr("data-j", j);
-                $("div.chessBoard.chessBoard").append(fieldTwo);
-            }
-        };
-        $("div.chessBoard").append('<div style="clear:both"></div>');
-    };
-    clickEvent();
-};
-draw()
