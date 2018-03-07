@@ -40,9 +40,7 @@ function drawChessBoard() {
 };
 drawChessBoard()
 
-
-
-
+// my first version
 // function draw() {
 //     for (let i = 0; i < rows.length; i++) {
 //         for (var j = 0; j < cols.length; j++) {
@@ -56,6 +54,7 @@ drawChessBoard()
 //     };
 // };
 // draw()
+
 
 
 // after code revier with Radek
