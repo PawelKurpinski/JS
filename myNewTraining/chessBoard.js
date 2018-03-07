@@ -31,10 +31,10 @@ function drawChessBoard() {
             }
             var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
             $("div.chessBoard").append(field);
-                    if (i == 0 && j==0) {
-                        var newD = $("<div>").innerHTML="<span style='font-size:2px'>John Doe</span>";
-                        $("div.chessBoard").append(newD);
-                    }
+                    // if (i == 0 && j==0) {
+                    //     var newD = $("<div>").innerHTML="<span style='font-size:2px, z-index=0'>John Doe</span>";
+                    //     $("div.chessBoard").append(newD);
+                    // }
             flag *= -1;        
         };
         $("div.chessBoard").append('<div style="clear:both"></div>');
