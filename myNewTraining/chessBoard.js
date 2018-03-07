@@ -20,6 +20,7 @@ var addClickEvents = function () {
 
 
 function drawChessBoard() {
+    var flag = -1;
         for (let i = 0; i < rows.length; i++) {
             for (var j = 0; j < cols.length; j++) {
                 var c = "";
@@ -52,3 +53,24 @@ drawChessBoard()
 //     };
 // };
 // draw()
+
+// after code revier with Radek
+
+// function drawChessBoard() {
+//     var flag = -1;
+//         for (let i = 0; i < rows.length; i++) {
+//             for (var j = 0; j < cols.length; j++) {
+//                 var c = "";
+//                 if ((((i==0 ||i%2==0) && j%2==0)) || ((i%2!=0 && j%2!=0))) {
+//                     c="blackTile";
+//                 } else {
+//                     c="whiteTile";
+//                 }
+//                 var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
+//                 $("div.chessBoard").append(field);
+//             };
+//             $("div.chessBoard").append('<div style="clear:both"></div>');
+//         };
+//         addClickEvents();
+// };
+// drawChessBoard()
