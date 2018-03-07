@@ -9,7 +9,7 @@ var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 
 var addClickEvents = function () {
-    $(".tile, .tileW").click(function () {
+    $(".blackTile, .whiteTile").click(function () {
         var $clickedField = $(this);
         var dataI = parseInt($clickedField.attr("data-i"));
         var dataJ = parseInt($clickedField.attr("data-j"));
@@ -21,20 +21,22 @@ var addClickEvents = function () {
 
 function drawChessBoard() {
     var flag = -1;
-        for (let i = 0; i < rows.length; i++) {
-            for (var j = 0; j < cols.length; j++) {
-                var c = "";
-                if ((((i==0 ||i%2==0) && j%2==0)) || ((i%2!=0 && j%2!=0))) {
-                    c="blackTile";
-                } else {
-                    c="whiteTile";
-                }
-                var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
-                $("div.chessBoard").append(field);
-            };
-            $("div.chessBoard").append('<div style="clear:both"></div>');
+    for (let i = 0; i < rows.length; i++) {
+        for (var j = 0; j < cols.length; j++) {
+            var c = "";
+            if (flag == -1) {
+                c="blackTile";
+            } else {
+                c="whiteTile";
+            }
+            var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
+            $("div.chessBoard").append(field);
+            flag *= -1;        
         };
-        addClickEvents();
+        $("div.chessBoard").append('<div style="clear:both"></div>');
+        flag *= -1;
+    };
+    addClickEvents();
 };
 drawChessBoard()
 
@@ -54,10 +56,10 @@ drawChessBoard()
 // };
 // draw()
 
+
 // after code revier with Radek
 
 // function drawChessBoard() {
-//     var flag = -1;
 //         for (let i = 0; i < rows.length; i++) {
 //             for (var j = 0; j < cols.length; j++) {
 //                 var c = "";
