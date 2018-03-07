@@ -42,6 +42,7 @@ drawChessBoard()
 
 
 
+
 // function draw() {
 //     for (let i = 0; i < rows.length; i++) {
 //         for (var j = 0; j < cols.length; j++) {
