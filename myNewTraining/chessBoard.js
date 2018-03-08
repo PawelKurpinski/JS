@@ -5,7 +5,7 @@ if (jQuery) {
 };
 var rows = [0, 1, 2, 3, 4, 5, 6, 7];
 var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
-var whiteChessPieces = ["♖","♘","♗","♔","♕","♗","♘","♖"];
+var whiteChessPieces = ["♙","♖","♘","♗","♔","♕","♗","♘","♖"];
 
 
 var addClickEvents = function () {
@@ -31,12 +31,15 @@ function drawChessBoard() {
             }
             var field = $("<div>").addClass(c).text("").attr("data-i", i).attr("data-j", j);
             $("div.chessBoard").append(field);
-                    if (i <= 1) {
-                        // whiteChessPieces.forEach(element => {
-                        //     field.text(element[j]);
-                        
-                         for (let i = 0; i < whiteChessPieces.length; i++) {
-                             let element = whiteChessPieces[j];
+                    if (i == 0) {
+                        for (let i = 0; i < whiteChessPieces.length; i++) {
+                             let element = whiteChessPieces[j+1];
+                             field.text(element);   
+                        };
+                    }
+                       else if (i == 1) {
+                        for (let i = 0; i < 1; i++) {
+                             let element = whiteChessPieces[i];
                              field.text(element);   
                         };
                     }
