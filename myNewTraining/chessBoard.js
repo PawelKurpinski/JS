@@ -5,7 +5,7 @@ if (jQuery) {
 };
 var rows = [0, 1, 2, 3, 4, 5, 6, 7];
 var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
-
+var chessPiece = ["♖"];
 
 
 var addClickEvents = function () {
@@ -29,12 +29,11 @@ function drawChessBoard() {
             } else {
                 c="whiteTile";
             }
-            var field = $("<div>").addClass(c).html([i][j]).attr("data-i", i).attr("data-j", j);
+            var field = $("<div>").addClass(c).text("").attr("data-i", i).attr("data-j", j);
             $("div.chessBoard").append(field);
-                    // if (i == 0 && j==0) {
-                    //     var newD = $("<div>").innerHTML="<span style='font-size:2px, z-index=0'>John Doe</span>";
-                    //     $("div.chessBoard").append(newD);
-                    // }
+                    if (i <= 1) {
+                        field.text("♖").class("new");
+                    }
             flag *= -1;        
         };
         $("div.chessBoard").append('<div style="clear:both"></div>');
@@ -43,6 +42,8 @@ function drawChessBoard() {
     addClickEvents();
 };
 drawChessBoard()
+
+
 
 // my first version
 // function draw() {
