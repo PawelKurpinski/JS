@@ -5,7 +5,7 @@ if (jQuery) {
 };
 var rows = [0, 1, 2, 3, 4, 5, 6, 7];
 var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
-var chessPiece = ["♖"];
+var whiteChessPieces = ["♖","♘","♗","♔","♕","♗","♘","♖"];
 
 
 var addClickEvents = function () {
@@ -32,9 +32,15 @@ function drawChessBoard() {
             var field = $("<div>").addClass(c).text("").attr("data-i", i).attr("data-j", j);
             $("div.chessBoard").append(field);
                     if (i <= 1) {
-                        field.text("♖").class("new");
+                        // whiteChessPieces.forEach(element => {
+                        //     field.text(element[j]);
+                        
+                         for (let i = 0; i < whiteChessPieces.length; i++) {
+                             let element = whiteChessPieces[j];
+                             field.text(element);   
+                        };
                     }
-            flag *= -1;        
+                    flag *= -1;        
         };
         $("div.chessBoard").append('<div style="clear:both"></div>');
         flag *= -1;
