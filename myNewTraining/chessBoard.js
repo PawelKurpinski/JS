@@ -152,21 +152,22 @@ console.log(secondTable);
 
 var tableOne = [2, 4, 11, 5, 22, 8, 16];
 var tableTwo = [];
+var num = 0;
 
 function tableOperation() {
     for (var i = 0; i < tableOne.length; i++) {
         for (var j = 0; j < tableOne.length; j++) {
             if (tableOne[i] * 2 == tableOne[j]) {
-                Number = (Math.pow(tableOne[i], 2));
+                num = (Math.pow(tableOne[i], 2));
             } else {
-                number = (tableOne[i]);
+                num = (tableOne[i]);
             }
         }
-        tableOperation.push(number);
+        tableTwo.push(num);
     }
     return tableTwo;
 }
     tableOperation();
 
-    console.log(tableTwo);
-    console.log(tableOne)
+    console.log("tabela 1: " + tableOne);
+    console.log("tabela 2: " + tableTwo);
