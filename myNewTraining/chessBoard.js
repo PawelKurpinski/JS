@@ -156,7 +156,7 @@ var num = 0;
 
 function tableOperation() {
     for (var i = 0; i < tableOne.length; i++) {
-        for (var j = 0; j < tableOne.length; j++) {
+        for (var j = i + 1; j < tableOne.length; j++) {
             if (tableOne[i] * 2 == tableOne[j]) {
                 num = (Math.pow(tableOne[i], 2));
             } else {
