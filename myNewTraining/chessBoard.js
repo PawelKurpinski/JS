@@ -1,8 +1,8 @@
-if (jQuery) {
-    alert("git!")
-} else {
-    alert("coś się skiepściło!")
-};
+// if (jQuery) {
+//     alert("git!")
+// } else {
+//     alert("coś się skiepściło!")
+// };
 var rows = [0, 1, 2, 3, 4, 5, 6, 7];
 var cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 var whiteChessPieces = ["♙", "♖", "♘", "♗", "♔", "♕", "♗", "♘", "♖"];
@@ -155,16 +155,19 @@ var tableOne = [2, 4, 11, 5, 22, 8, 16];
 var tableTwo = [];
 var num = 0;
 
+                // 4,16,121,64
+
 function tableOperation() {
     for (var i = 0; i < tableOne.length; i++) {
-        for (var j = 0; j < tableOne.length; j++) {
+        for (var j = 1; j < tableOne.length; j++) {
             if (tableOne[i] * 2 == tableOne[j]) {
                 num = (Math.pow(tableOne[i], 2));
+                tableTwo.push(num);
+                console.log(num);
             } else {
-                num = (tableOne[i]);
+                num2 = (tableOne[i]); 
             }
         }
-        tableTwo.push(num);
     }
     return tableTwo;
 }
@@ -172,3 +175,12 @@ function tableOperation() {
 
     console.log("tabela 1: " + tableOne);
     console.log("tabela 2: " + tableTwo);
+
+
+// const ourTable = ['Marcin', 'Ania', 'Agnieszka', 'Monika', 'Piotrek'];
+// const woman = ourTable.filter(function(el) {
+//     return el.charAt(el.length-1) == 'a';
+// });
+
+// console.log(woman);
+
