@@ -157,7 +157,7 @@ var num = 0;
 
         // 4,16,121,64
 
-function tableOperation() {
+function tableOperationold() {
     for (var j = 0; j < tableOne.length; j++) {
         for (var i = 0; i < tableOne.length; i++) {
             if (tableOne[j] * 2 == tableOne[i]) {
@@ -170,11 +170,25 @@ function tableOperation() {
             } 
         }
         tableTwo.push(num);
-        console.log(num);
-        
+        console.log(num);   
     }
     return tableTwo;
 }
+
+function tableOperation() {
+    for (var j = 0; j < tableOne.length; j++) {
+        num = (tableOne[j]);
+        for (var i = 0; i < tableOne.length; i++) {
+            if (tableOne[j] * 2 == tableOne[i]) {
+                num = (Math.pow(tableOne[j], 2)); 
+            }
+        }
+        tableTwo.push(num);
+        console.log(num);   
+    }
+    return tableTwo;
+}
+
     tableOperation();
 
     console.log("table 1: " + tableOne);
@@ -188,3 +202,59 @@ function tableOperation() {
 
 // console.log(woman);
 
+const tab1 = ["Kot", "Pies", "Chomik", "Ninja", "Wiewiórka"];
+console.log("liczba elementów w tabeli: " + tab.length);
+
+tab1.forEach(element => {
+    console.log(element.length);  
+});
+
+tab1.unshift("Chomik");
+console.log(tab1);
+
+tab1.splice(1, 0, 'Piotr');
+
+var myNewTable = [];
+
+
+// random numbers generator
+
+var randomNumber = Math.floor(Math.random()*10) + 1;
+
+function generateArray() {
+    for (var i = 0; i < 6; i++) {
+        myNewTable.push(Math.floor(Math.random()*10) + 1);     
+    }
+}
+generateArray();
+
+console.log(myNewTable);
+
+console.log(myNewTable.sort());
+
+console.log(myNewTable.sort(function(a,b){
+    a - b;
+}));
+
+console.log(myNewTable);
+
+const tabUsers = [
+    {name : "Marcin", age: 14},
+    {name : "Piotr", age: 18},
+    {name : "Agnieszka", age: 13},
+    {name : "Weronika", age: 20}
+]
+
+console.log(tabUsers[0].age);
+
+
+function sortElements() {
+    for (let i = 0; i < tabUsers.length; i++) {
+        var adultsAge = tabUsers[i].age
+            if (adultsAge >= 18) {
+                console.log(tabUsers[i]);   
+            }
+        }
+        
+    };
+sortElements();
