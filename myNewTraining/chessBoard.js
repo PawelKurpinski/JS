@@ -161,13 +161,12 @@ function tableOperation() {
     for (var j = 0; j < tableOne.length; j++) {
         for (var i = 0; i < tableOne.length; i++) {
             if (tableOne[j] * 2 == tableOne[i]) {
-                num = (Math.pow(tableOne[i], 2)); 
+                num = (Math.pow(tableOne[j], 2)); 
                 console.log(num);
                 break;             
             } else {
-                num = (tableOne[i]);
+                num = (tableOne[j]);
                 console.log(num);
-                
             } 
         }
         tableTwo.push(num);
