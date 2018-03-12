@@ -42,7 +42,8 @@ function drawChessBoard() {
                     field.text(element);
                 };
             }
-            flag *= -1;
+            flag *= -1; 
+            // dodaję flagę czyli zmienną zainicjowaną -1
         };
         $("div.chessBoard").append('<div style="clear:both"></div>');
         flag *= -1;
