@@ -155,26 +155,31 @@ var tableOne = [2, 4, 11, 5, 22, 8, 16];
 var tableTwo = [];
 var num = 0;
 
-                // 4,16,121,64
+        // 4,16,121,64
 
 function tableOperation() {
-    for (var i = 0; i < tableOne.length; i++) {
-        for (var j = 1; j < tableOne.length; j++) {
-            if (tableOne[i] * 2 == tableOne[j]) {
-                num = (Math.pow(tableOne[i], 2));
-                tableTwo.push(num);
+    for (var j = 0; j < tableOne.length; j++) {
+        for (var i = 0; i < tableOne.length; i++) {
+            if (tableOne[j] * 2 == tableOne[i]) {
+                num = (Math.pow(tableOne[i], 2)); 
                 console.log(num);
+                break;             
             } else {
-                num2 = (tableOne[i]); 
-            }
+                num = (tableOne[i]);
+                console.log(num);
+                
+            } 
         }
+        tableTwo.push(num);
+        console.log(num);
+        
     }
     return tableTwo;
 }
     tableOperation();
 
-    console.log("tabela 1: " + tableOne);
-    console.log("tabela 2: " + tableTwo);
+    console.log("table 1: " + tableOne);
+    console.log("table 2: " + tableTwo);
 
 
 // const ourTable = ['Marcin', 'Ania', 'Agnieszka', 'Monika', 'Piotrek'];
