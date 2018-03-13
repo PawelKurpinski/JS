@@ -262,4 +262,9 @@ sortElements();
 
 function average (arr){
     let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += arr[i];
+    }
+    return (sum/i);
 }
+console.log(sum/i);
