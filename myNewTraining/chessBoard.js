@@ -258,3 +258,8 @@ function sortElements() {
         
     };
 sortElements();
+
+
+function average (arr){
+    let sum = 0;
+}
