@@ -131,6 +131,9 @@ function tableMin(arr) {
 const tab = [2, 810, 76, 33, 18, 1, 699, 23];
 console.log(tableMin(tab));
 
+
+
+
 // zadanie 2
 
 var firsTable = [2, 4, 11, 5, 22, 8, 16];
@@ -201,6 +204,8 @@ function tableOperation() {
 // });
 
 // console.log(woman);
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
 
 const tab1 = ["Kot", "Pies", "Chomik", "Ninja", "Wiewiórka"];
 console.log("liczba elementów w tabeli: " + tab.length);
