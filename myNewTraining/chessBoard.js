@@ -273,3 +273,4 @@ function average (arr){
     return (sum/i);
 }
 console.log(sum/i);
+
