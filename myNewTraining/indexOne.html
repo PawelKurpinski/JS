@@ -93,7 +93,6 @@
     // Zadanie 5
     // Napisz funkcję ```getEvenAvarage```, która ma przyjmować tylko jeden argument &ndash; tablicę. Funkcja ta ma zwracać średnią wartość **parzystych** liczb z tej tablicy. Dla uproszczenia można założyć, że tablica ma w sobie tylko liczby. Jeśli w tablicy nie ma parzystych liczb niech zwraca null.
 
-
     function getEvenAverage(array) {
       let arrayNew = [];
       for (let i = 0; i < array.length; i++) {
@@ -112,10 +111,12 @@
       } else {
         return evenNumber / arrayNew.length;
       }
-    };
+    }; 
+    
     console.log(getEvenAverage([1, 2, 3, 4, 5, 6, 7]));
     console.log(getEvenAverage([1, 1, 1, 1]));
     console.log(getEvenAverage([2, 8, 3, 7, 4]));
+
   </Script>
 
 </body>
