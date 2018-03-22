@@ -1,72 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tables Day 1 CL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tables Day 1 CL</title>
 </head>
+
 <body>
 
-    
 
-<Script>
 
+  <Script>
     /* Zadanie 1 */
     // Napisz funkcję ```distFromAvarage```, która ma przyjmować tylko jeden argument tablicę. Funkcja ta ma zwracać też tablicę. Zwracana tablica powinna mieć w sobie różnicę pomiędzy liczbą z danej komórki a średnią wartością tablicy.
 
-        let sum = 0;
-        let average = 0;
-        let newNumber = 0;
+    let sum = 0;
+    let average = 0;
+    let newNumber = 0;
 
-        var firstArray = [1,2,3,4,5,6,7];
-        var newArray = [];
-        var secondArray = [1,1,1,1];
-        var thirdArray = [2,8,3,7];
-        var ultimateArray = [2,6,9,8,10,1];
+    var firstArray = [1, 2, 3, 4, 5, 6, 7];
+    var newArray = [];
+    var secondArray = [1, 1, 1, 1];
+    var thirdArray = [2, 8, 3, 7];
+    var ultimateArray = [2, 6, 9, 8, 10, 1];
 
-        function distFromAvarage(params) {
-            for (let i = 0; i < params.length; i++) {
-                sum += params[i];
-            } average = sum / params.length;
-         }
-        distFromAvarage(firstArray);
-        console.log(firstArray);
-        console.log(average);
+    function distFromAvarage(params) {
+      for (let i = 0; i < params.length; i++) {
+        sum += params[i];
+      }
+      average = sum / params.length;
+    }
+    distFromAvarage(firstArray);
+    console.log(firstArray);
+    console.log(average);
 
 
-        function returnAverage (array) {
-            for (let j = 0; j < array.length; j++) {
-                newNumber = array[j] - average;
-                newArray.push(Math.abs(newNumber));
-            }
-            return newArray;
-        } 
-        returnAverage(firstArray);
-        console.log(newArray);
+    function returnAverage(array) {
+      for (let j = 0; j < array.length; j++) {
+        newNumber = array[j] - average;
+        newArray.push(Math.abs(newNumber));
+      }
+      return newArray;
+    }
+    returnAverage(firstArray);
+    console.log(newArray);
 
     // Zad.2
     // Stwórz tablicę z listą swoich ulubionych owoców. Następnie:
     // 1. Wypisz pierwszy owoc w konsoli.
     // 2. Wypisz ostatni owoc w konsoli (skorzystaj z atrybutu ```length```).
     // 3. W pętli wypisz wszystkie owoce (skorzystaj z atrybutu ```length```).
-    
+
     var favFruits = ["Apple", "Orange", "Cherry", "Banana"];
-    console.log(favFruits[0]);    
-    console.log(favFruits[3]);   
-    console.log(favFruits.length);   
-    console.log((favFruits[favFruits.length-1]));
-    
+    console.log(favFruits[0]);
+    console.log(favFruits[3]);
+    console.log(favFruits.length);
+    console.log((favFruits[favFruits.length - 1]));
+
     /* Zadanie 3 */
 
     function consoleLogItems(params) {
-            for (let i = 0; i < params.length; i++) {
-                 console.log(params[i]);
-            }
-         }
+      for (let i = 0; i < params.length; i++) {
+        console.log(params[i]);
+      }
+    }
 
-     consoleLogItems(firstArray);
-</Script>
+    consoleLogItems(firstArray);
+
+    // Zad 4
+
+    // Napisz funkcję `multiply(array)`. Funkcja ma przyjmować tylko jeden argument &ndash; tablicę. Następnie funkcja `multiply` ma pomnożyć wszystkie liczby znajdujące się w tablicy (przy pomocy pętli **for**) i zwrócić wynik.
+
+    multiply([1, 2, 3, 4, 5, 6, 7]);
+    5040
+    multiply([1, 1, 1, 1]);
+    1
+    multiply([2, 8, 3, 7]);
+    336
+
+
+    function multiply(array) {
+      var score = 1;
+      for (let i = 0; i < array.length; i++) {
+        score *= array[i]
+      }
+      console.log(score);
+    }
+
+
+    // Zadanie 5
+    // Napisz funkcję ```getEvenAvarage```, która ma przyjmować tylko jeden argument &ndash; tablicę. Funkcja ta ma zwracać średnią wartość **parzystych** liczb z tej tablicy. Dla uproszczenia można założyć, że tablica ma w sobie tylko liczby. Jeśli w tablicy nie ma parzystych liczb niech zwraca null.
+
+    getEvenAvarage([1, 2, 3, 4, 5, 6, 7]);
+    getEvenAvarage([1, 1, 1, 1]);
+    getEvenAvarage([2, 8, 3, 7, 4]);
+
+    function getEvenAvarage(array) {
+      let sum = 0;
+      let average = 0;
+      for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+            
+      }
+    }
+
+  </Script>
 
 </body>
+
 </html>
