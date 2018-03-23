@@ -117,8 +117,23 @@
     console.log(getEvenAverage([1, 1, 1, 1]));
     console.log(getEvenAverage([2, 8, 3, 7, 4])); 
 
+    function doIt (array) {
+      
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+          sum += array[i];
+          k++          
+        }
+      }
+      if (k==0){
+        return "null"
+      } else sum / k
+    } 
+
   </Script>
 
 </body>
 
 </html>
+
+
