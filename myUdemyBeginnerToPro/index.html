@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Udemy file</title>
+</head>
+
+<body>
+
+    <h1>This my training</h1>
+
+    <input type="text" id="cel">
+    <input type="submit" onclick="convertTemperature()" />
+
+    <script>
+        // Zad.1
+        function is_integer(param) {
+            if (param % 2 == 0) {
+                return 'OK'
+            } else {
+                return 'Wrong number!'
+            }
+        };
+        is_integer();
+
+        // Zad.2
+        var array = [1, 2, 3, 4]
+        let sum = 0;
+
+        array.forEach(element => {
+            sum += element;
+        });
+        console.log(sum);
+
+
+
+
+        // Zad.3
+        // c/5 = (f-32)/9
+
+        var c = 0;
+
+        function convertTemperature(f) {
+            var f = document.getElementById("cel").value;
+            c = ((f - 32) / 9) * 5;
+            console.log(c);
+        };
+
+        //Zad.4
+
+        var inputNumber = prompt('Please enter an integer');
+
+        function silnia(f) {
+        var wynik = f;
+            for (let i = 1; i <= f-1; i++) {
+                wynik *= (f - i);
+            }
+            console.log(wynik);
+        };
+        silnia(4)
+    </script>
+
+</body>
+
+</html>
