@@ -185,7 +185,24 @@ console.log(c.splice(1,2));
 console.log(c.splice(1,2, "dom", "kura"));
 console.log(c);
 
-  </Script>
+var d = ["Dom", "okno", "Drzewo", "Krzak", "okno"];
+
+d.forEach(element => {
+  console.log(element);
+});
+
+d.forEach((element, index, array) => {
+    if (element === "okno") {
+      element = element.toLocaleUpperCase();
+    } else {
+      element = element.toLowerCase();
+    }
+    console.log(index, element);
+    
+});
+
+
+  </script>
 
 </body>
 
