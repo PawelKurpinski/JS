@@ -201,11 +201,19 @@ d.forEach((element, index, array) => {
     
 });
 
+var e = [1, 2, , 4, undefined, 5];
+var newE = [];
+
+e.forEach(element => {
+  newE.push(element);
+  console.log(newE);
+  return newE
+});console.log(newE.length);
+
+
 
   </script>
 
 </body>
 
 </html>
-
-
