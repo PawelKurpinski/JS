@@ -210,7 +210,33 @@ e.forEach(element => {
   return newE
 });console.log(newE.length);
 
+//--------------------------------------------------------------
 
+function num_printer(upto){
+  for (let i = 0; i <= upto; i++) {
+    if (i % 2 != 0) {
+      console.log(i);      
+    }
+  }
+} num_printer(10);
+
+//ale taki kod wykonuje tylko jedno zadanie - a jeżeli chcę by był bardziej elastyczy? Wowczas pojawia się idea funkcji przekazanej jako argument! 
+//Ta funkcja sprawdza pażystość ale już poza funkcja głowną
+
+function is_odd(n) {
+  return n % 2 != 0;
+}
+
+function num_printer(upto, filter){
+  for (let i = 0; i <= upto; i++) {
+    if (filter(i)) {
+      console.log(i);      
+    }
+  }
+}
+num_printer(10, is_odd);
+
+//o co tu chodzi? ;) Ano wywołuję funkcję num_printer przekazując liczbę i funkcję! Filter to jakby proxy to "wydmuszka" za ktorą podstawiana jest funkcja przekazywana czyli is_odd. Uwaga! na z i_odd to i z pętli. 10 zaś to upto.
 
   </script>
 
