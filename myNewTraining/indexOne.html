@@ -201,15 +201,6 @@ d.forEach((element, index, array) => {
     
 });
 
-var e = [1, 2, , 4, undefined, 5];
-var newE = [];
-
-e.forEach(element => {
-  newE.push(element);
-  console.log(newE);
-  return newE
-});console.log(newE.length);
-
 //--------------------------------------------------------------
 
 function num_printer(upto){
@@ -229,7 +220,7 @@ function is_odd(n) {
 
 function num_printer(upto, filter){
   for (let i = 0; i <= upto; i++) {
-    if (filter(i)) {
+    if (function filter(i){}){  /* to coś dziwnego wyszło ale w konsoli nie trzeba słowa function oraz dodatkowych {} */
       console.log(i);      
     }
   }
@@ -237,6 +228,9 @@ function num_printer(upto, filter){
 num_printer(10, is_odd);
 
 //o co tu chodzi? ;) Ano wywołuję funkcję num_printer przekazując liczbę i funkcję! Filter to jakby proxy to "wydmuszka" za ktorą podstawiana jest funkcja przekazywana czyli is_odd. Uwaga! na z i_odd to i z pętli. 10 zaś to upto.
+
+
+
 
   </script>
 

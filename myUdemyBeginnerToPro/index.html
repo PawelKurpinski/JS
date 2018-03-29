@@ -51,16 +51,119 @@
 
         //Zad.4
 
-        var inputNumber = prompt('Please enter an integer');
+        // var inputNumber = prompt('Please enter an integer');
 
-        function silnia(f) {
-        var wynik = f;
-            for (let i = 1; i <= f-1; i++) {
-                wynik *= (f - i);
-            }
-            console.log(wynik);
+        // function silnia(f) {
+        // var wynik = f;
+        //     for (let i = 1; i <= f-1; i++) {
+        //         wynik *= (f - i);
+        //     }
+        //     console.log(wynik);
+        // };
+        // silnia(inputNumber)
+
+        // var inputNumber = prompt('Please enter an integer');
+
+        // function silnia(f) {
+        // var wynik = f;
+        //     for (let i = f; i >= f; i--) {
+        //         wynik *= i;
+        //     }
+        //     console.log(wynik);
+        // };
+        // silnia(inputNumber)
+
+
+        //Zad.5
+
+        var e = [1, 3, 4, 8, 2];
+        var summ = 0;
+
+        e.forEach(element => {
+            summ += element;
+        });
+        console.log(summ);
+
+        //Zad.6
+
+
+        let coinsA = 0;
+        var modA = 0;
+        var coinsB = 0;
+        var mobB = 0;
+        var coinsC = 0;
+        var modC = 0;
+        var coinsD = 0;
+        var modD = 0;
+        var coinsE = 0;
+        var modE = 0;
+
+        function convertToCoinsZero(amount) {
+            var coinsA = Math.floor(amount / 25);
+            console.log(coinsA + " x 25");
+            var modA = amount % 25;
+            var coinsB = Math.floor(modA / 10);
+            console.log(coinsB + " x 10");
+            var mobB = coinsB % 10;
+            var coinsC = Math.floor(mobB) / 5;
+            var modC = coinsC % 5;
+            var coinsD = Math.floor(modC) / 2;
+            var modD = coinsD % 2;
+            var coinsE = Math.floor(modD) / 1;
+            var modE = coinsE % 1;
         };
-        silnia(4)
+        convertToCoinsZero(87);
+
+        var arrayOfCoins = [25, 10, 5, 2, 1];
+
+        function convertToCoins(amountOfMoney) {
+            for (let i = 0; i < arrayOfCoins.length; i++) {
+                coins = Math.floor(amountOfMoney / arrayOfCoins[i]);
+                console.log(coins + "x" + arrayOfCoins[i]);
+                amountOfMoney = amountOfMoney % arrayOfCoins[i];
+            };
+        };
+        convertToCoins(87);
+
+
+        // Zad. 7
+
+        var myArray = [1, 2, , 4, undefined, 5];
+        var newArray = [];
+
+        myArray.forEach(element => {
+            newArray.push(element);
+            return newArray
+        });
+        console.log("The real length of newArray is: " + newArray.length);
+
+        // Zad. 8
+
+        function numReverse(number) {
+            var number = number + "";
+            return number.split("").reverse().join();
+        };
+        console.log(numReverse(12345));
+
+        // Zad. 9
+
+        function palindromeCheck(sentence) {
+            var arrayOfLetters = sentence.split("");
+            for (let i = 0; i < arrayOfLetters.length; i++) {
+                    if (arrayOfLetters[i] !== arrayOfLetters[arrayOfLetters.length -i - 1]) {
+                        console.log("this words are not palindroms");
+                        return false;
+                    } else {
+                        console.log("this words are palindroms");
+                        return true;
+                    }
+                }
+            };
+        palindromeCheck("olo a olo");
+
+
+        // second idea - more complex so good to see!
+        
     </script>
 
 </body>
