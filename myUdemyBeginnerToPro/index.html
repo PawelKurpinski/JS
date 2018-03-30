@@ -15,6 +15,7 @@
     <input type="text" id="cel">
     <input type="submit" onclick="convertTemperature()" />
 
+
     <script>
         // Zad.1
         function is_integer(param) {
@@ -140,7 +141,7 @@
         // Zad. 8
 
         function numReverse(number) {
-            var number = number + "";
+            var number = number + ""; /* concvertion - integer to a string */
             return number.split("").reverse().join();
         };
         console.log(numReverse(12345));
@@ -151,70 +152,96 @@
         function palindromeCheck(sentence) {
             var arrayOfLetters = sentence.split("");
             for (let i = 0; i < arrayOfLetters.length; i++) {
-                    if (arrayOfLetters[i] !== arrayOfLetters[arrayOfLetters.length -i - 1]) {
-                        console.log("this words are not palindroms");
-                        return false;
-                    } else {
-                        console.log("this words are palindroms");
-                        return true;
-                    }
+                if (arrayOfLetters[i] !== arrayOfLetters[arrayOfLetters.length - i - 1]) {
+                    console.log("this words are not palindroms");
+                    return false;
+                } else {
+                    console.log("this words are palindroms");
+                    return true;
                 }
-            };
+            }
+        };
         palindromeCheck("olo a olo");
 
 
 
 
-// second idea - more complex so good to see!------------------------------------------------------------------------------------
+        // second idea - more complex so good to see!------------------------------------------------------------------------------------
 
 
-function check_Palindrome(str_entry){
-// Change the string into lower case and remove  all non-alphanumeric characters
-   var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
-	var ccount = 0;
-// Check whether the string is empty or not
-	if(cstr==="") {
-		// alert("Nothing found!");
-		return false;
-	}
-// Check if the length of the string is even or odd 
-	if ((cstr.length) % 2 === 0) {
-		ccount = (cstr.length) / 2;
-	} else {
-// If the length of the string is 1 then it becomes a palindrome
-		if (cstr.length === 1) {
-			// alert("Entry is a palindrome.");
-			return true;
-		} else {
-// If the length of the string is odd ignore middle character
-			ccount = (cstr.length - 1) / 2;
-		}
-	}
-// Loop through to check the first character to the last character and then move next
-	for (var x = 0; x < ccount; x++) {
-// Compare characters and drop them if they do not match 
-		if (cstr[x] != cstr.slice(-1-x)[0]) {
-			// alert("Entry is not a palindrome.");
-			return false;
-		}
-	}
-	// alert("The entry is a palindrome.");
-	return true;
-}
-check_Palindrome('madam');
-check_Palindrome('nurses run');
-check_Palindrome('fox');
+        function check_Palindrome(str_entry) {
+            // Change the string into lower case and remove  all non-alphanumeric characters
+            var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '');
+            var ccount = 0;
+            // Check whether the string is empty or not
+            if (cstr === "") {
+                // alert("Nothing found!");
+                return false;
+            }
+            // Check if the length of the string is even or odd 
+            if ((cstr.length) % 2 === 0) {
+                ccount = (cstr.length) / 2;
+            } else {
+                // If the length of the string is 1 then it becomes a palindrome
+                if (cstr.length === 1) {
+                    // alert("Entry is a palindrome.");
+                    return true;
+                } else {
+                    // If the length of the string is odd ignore middle character
+                    ccount = (cstr.length - 1) / 2;
+                }
+            }
+            // Loop through to check the first character to the last character and then move next
+            for (var x = 0; x < ccount; x++) {
+                // Compare characters and drop them if they do not match 
+                if (cstr[x] != cstr.slice(-1 - x)[0]) {
+                    // alert("Entry is not a palindrome.");
+                    return false;
+                }
+            }
+            // alert("The entry is a palindrome.");
+            return true;
+        }
+        check_Palindrome('madam');
+        check_Palindrome('nurses run');
+        check_Palindrome('fox');
 
 
-let str ="asdf asdf a adsfasdf asasfd afkdjgj"
+        let str = "asdf asdf a adsfasdf asasfd afkdjgj"
 
-str = str.split(" ").map((item) => {
-return item.slice(0).slice(0,1).toUpperCase() + item.slice(1)
-}).join(" ")
- 
-// Zad. 10
+        str = str.split(" ").map((item) => {
+            return item.slice(0).slice(0, 1).toUpperCase() + item.slice(1)
+        }).join(" ")
 
+        // Zad. 10
 
+        let x = prompt("Write a first integer: ");
+        let y = prompt("Write a second integer: ");
+
+        function sumTriple(x, y) {
+
+            if (x == y) {
+                return (x * y) * 3;
+            } else {
+                return (x + y);
+            };
+        };
+
+        // second option------------------------------------------------------------------------------------------------------------------------------------------
+
+        function sumTriple(x, y) {
+            if (x == y) {
+                return 3 * (x + y);
+            } else {
+                return (x + y);
+            }
+        }
+        console.log(sumTriple(10, 20));
+        console.log(sumTriple(10, 10));
+
+        // Zad. 11
+        
+        
 
     </script>
 
