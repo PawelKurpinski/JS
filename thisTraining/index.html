@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wtf is this "this" ;)</title>
 </head>
+
 <body>
-  
 
-<script>
 
-  // dwie funkcje, które zostaną wywołane poniżej wraz z przekazaniem obiektów ja i ty
+  <script>
 
-  function identyfikuj() {
+    // dwie funkcje, które zostaną wywołane poniżej wraz z przekazaniem obiektów ja i ty
+
+    function identyfikuj() {
       return this.name.toUpperCase();
-  }
+    }
 
-  function mow() {
+    function mow() {
       var pozdrowienie = "Witaj, jestem " + identyfikuj.call(this);
       console.log(pozdrowienie);
-      
-  }
-// dwa obiekty
 
-  var ja = {
-    name: "Paweł"
-  }
+    }
+    // dwa obiekty
 
-  var ty = {
-    name: "Czytelnik"
-  }
+    var ja = {
+      name: "Paweł"
+    }
 
-// wywołanie funkcji UWAGA! .call to metoda do przekazania obiektu
+    var ty = {
+      name: "Czytelnik"
+    }
 
-alert(identyfikuj.call(ja));
+    // wywołanie funkcji UWAGA!  .call to metoda do przekazania obiektu
 
-alert(mow.call(ja));
+    alert(identyfikuj.call(ja));
 
-
-function baz() {
-    // Stos wywołań to: 'baz', więc źródło wywołania
-    // funkcji znajduje się w zakresie globalnym.
-
-    console.log( "baz" );
-    bar(); // <-- ródło wywołania funkcji 'bar'.
-}
-
-function bar() {
-    // Stos wywołań to: 'baz' -> 'bar', więc źródło wywołania
-    // funkcji znajduje się w 'baz'.
-
-    console.log( "bar" );
-    foo(); // <-- ródło wywołania funkcji 'foo'.
-}
-
-function foo() {
-    // Stos wywołań to: 'baz' -> 'bar' -> 'foo',
-    // więc ródło wywołania funkcji znajduje się w 'bar'.
-
-    console.log( "foo" );
-}
-
-baz(); // <-- źródło wywołania funkcji 'baz'.
+    alert(mow.call(ja));
 
 
+    function baz() {
+      // Stos wywołań to: 'baz', więc źródło wywołania
+      // funkcji znajduje się w zakresie globalnym.
 
-</script>
+      console.log("baz");
+      bar(); // <-- ródło wywołania funkcji 'bar'.
+    }
+
+    function bar() {
+      // Stos wywołań to: 'baz' -> 'bar', więc źródło wywołania
+      // funkcji znajduje się w 'baz'.
+
+      console.log("bar");
+      foo(); // <-- ródło wywołania funkcji 'foo'.
+    }
+
+    function foo() {
+      // Stos wywołań to: 'baz' -> 'bar' -> 'foo',
+      // więc ródło wywołania funkcji znajduje się w 'bar'.
+
+      console.log("foo");
+    }
+
+    baz(); // <-- źródło wywołania funkcji 'baz'.
+
+
+
+  </script>
 </body>
+
 </html>
