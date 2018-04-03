@@ -25,5 +25,18 @@ function reverseNumberTwo(numb) {
      } return score *-1;
 } reverseNumberTwo(-12345);
 
+// or like this! it's very cool because we do not need to use if statement! The clue is that we use multiplication of Math.sign of "n" which can be positive and negative
+
+function reverseNumberTwo(n) {
+    const reversed = n
+    .toString() /* zmiana na strig */
+    .split('') /* zmiana na tablicę */
+    .reverse() /* odwrócenie kolejności tablicy */
+    .join(''); /* zmiana na string */
+
+    return parseInt(reversed) * Math.sign(n);  /* parse zmienia string na liczbę a Math.sign sprawdza znak */  
+} reverseNumberTwo(-12345);
 
 module.exports = reverseInt;
+
+
