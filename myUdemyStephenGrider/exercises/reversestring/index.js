@@ -13,13 +13,13 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// first option
+// first option----------------------------------------------------
 
 function reverseOne(str) {
     return str.split("").reverse().join(""); /* split nie zadziała bez "" a join bez nich da przecinki */
 } console.log(reverse("apple"));
 
-// second option
+// second option---------------------------------------------------
 
 let newArr = [];
 
@@ -30,11 +30,10 @@ function reverse(string) {
     } return new newArr
 } console.log(reverse("apple"));
 
-// third option
+// third option-----------------------------------------------------
 
 function reverse(str) {
     let reversed = '';
-
     for (let character of str){
         reversed = character + reversed;
     } return reversed;
@@ -50,9 +49,8 @@ function reverse(str) {
     }, '');
 }; reverse ("Paweł");
 
-// redused
+
+// redused of reduce function ;)
 function reverse(str) {
     return str.split('').reduce((rev, char) => char + rev, '');
 }; reverse ("Paweł");
-
-module.exports = reverse;
