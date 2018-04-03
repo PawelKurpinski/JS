@@ -42,14 +42,17 @@ function reverse(str) {
 
 module.exports = reverse;
 
-//fourth option with something new ;)
+//fourth option with something new ;) arrow function with reduce
 
 function reverse(str) {
-    str.split('').reduce(() => {
-        
+    return str.split('').reduce((reversed, char) => {
+        return  char + reversed;
     }, '');
+}; reverse ("Paweł");
 
-
-};
+// redused
+function reverse(str) {
+    return str.split('').reduce((rev, char) => char + rev, '');
+}; reverse ("Paweł");
 
 module.exports = reverse;
