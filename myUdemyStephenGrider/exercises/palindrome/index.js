@@ -11,7 +11,7 @@
 // first solution - quite interesting 
 
 function palindrome(str) {
-    return str == str.split('').reverse().join('');
+    return str === str.split('').reverse().join('');
 }; palindrome("dom");
 
 // second option
