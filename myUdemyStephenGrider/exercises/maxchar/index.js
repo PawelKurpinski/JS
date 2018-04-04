@@ -8,11 +8,15 @@
 // function maxChar(str) {}
 
 
-const string = "Hello There!";
+const string = "Helo There!";
 const chars = {};
 
-for (const index of string) {
-    console.log(index);
+for (const i of string) {
+    (!chars[i]) ? chars[i] = 1 : chars[i]+1;
 } 
+chars;
+
+
+
 
 module.exports = maxChar;
