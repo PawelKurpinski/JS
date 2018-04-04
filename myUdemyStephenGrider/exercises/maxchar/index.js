@@ -14,7 +14,6 @@ const chars = {};
 for (const i of string) {
     (!chars[i]) ? chars[i] = 1 : chars[i]++; /* shorthand of "if" statement */
     console.log(i);  /* chars[i]=1 always but i = "H" than "e" ect */
-    
     console.log(chars[i]);
 } 
 console.log(chars);
