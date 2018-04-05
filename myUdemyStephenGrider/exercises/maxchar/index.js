@@ -27,7 +27,7 @@ function maxNumberOfLetters(string) {
     }
     console.log(objectWithLetters);
 
-// ----------------------------------------
+// ----------------------------------
 
     let maxNumberOfOccurrences = 0;
     let maxChar = '';
