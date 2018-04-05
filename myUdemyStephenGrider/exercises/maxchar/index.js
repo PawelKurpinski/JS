@@ -17,7 +17,7 @@ for (const i of str) {
     console.log(objectOfLetters[i]);
 } 
 
-// --------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
 
 function maxNumberOfLetters(string) {
     const objectWithLetters = {};
@@ -27,19 +27,24 @@ function maxNumberOfLetters(string) {
     } console.log(objectWithLetters);
     
     
-    let maxnumberOfOccurrences = 0;
+    let maxNumberOfOccurrences = 0;
     let maxChar = '';
     
-    for (const maxIndexLetter in objectWithLetters) {
-        console.log(maxIndexLetter);
+
+    for (const letterOfMaxOccurences in objectWithLetters) {
         
-        if (objectWithLetters[maxIndexLetter] > maxnumberOfOccurrences) {
-            maxnumberOfOccurrences = objectWithLetters[maxIndexLetter];
-            maxChar = maxIndexLetter;
+        if (objectWithLetters[letterOfMaxOccurences] > maxNumberOfOccurrences) {
+            maxNumberOfOccurrences = objectWithLetters[letterOfMaxOccurences];
+            maxChar = letterOfMaxOccurences;
         } 
     } 
     return maxChar;
 }; maxNumberOfLetters("Heeeello!");
+
+
+
+
+
 
 
 module.exports = maxChar;
