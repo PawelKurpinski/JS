@@ -24,6 +24,8 @@ function maxNumberOfLetters(string) {
 
     for (let letter of string) {
         (objectWithLetters[letter]) ? objectWithLetters[letter]++ : objectWithLetters[letter] = 1;
+
+                
     } console.log(objectWithLetters);
     
     
@@ -47,4 +49,4 @@ function maxNumberOfLetters(string) {
 
 
 
-module.exports = maxChar;
+// module.exports = maxChar;
