@@ -27,7 +27,7 @@ function maxNumberOfLetters(string) {
     }
     console.log(objectWithLetters);
 
-// ----------------------------------
+// -----------------------------------------------
 
     let maxNumberOfOccurrences = 0;
     let maxChar = '';
@@ -36,7 +36,7 @@ function maxNumberOfLetters(string) {
     for (const letterOfMaxOccurences in objectWithLetters) {
         
         if (objectWithLetters[letterOfMaxOccurences] > maxNumberOfOccurrences) {
-            maxNumberOfOccurrences = objectWithLetters[letterOfMaxOccurences];
+            objectWithLetters[letterOfMaxOccurences] = maxNumberOfOccurrences;
             maxChar = letterOfMaxOccurences;
         }
     }
