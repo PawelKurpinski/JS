@@ -7,6 +7,7 @@
 
 // function maxChar(str) {}
 
+// ---------------------------------------------------- ---- ---- --- 
 
 const str = "Helo There!";
 const objectOfLetters = {};
@@ -27,14 +28,14 @@ function maxNumberOfLetters(string) {
     }
     console.log(objectWithLetters);
 
-// -----------------------------------------------
+    // -----------------------------------------------
 
     let maxNumberOfOccurrences = 0;
     let maxChar = '';
 
-// here below letterOfMaxOccurences is a letter and a key od the objects!
+    // here below letterOfMaxOccurences is a letter and a key od the objects!
     for (const letterOfMaxOccurences in objectWithLetters) {
-        
+
         if (objectWithLetters[letterOfMaxOccurences] > maxNumberOfOccurrences) {
             objectWithLetters[letterOfMaxOccurences] = maxNumberOfOccurrences;
             maxChar = letterOfMaxOccurences;
@@ -46,7 +47,29 @@ maxNumberOfLetters("Heeeello!");
 
 
 
+// function ileRazysiePowtarza(wyraz) {
+    
+//     var obiekt = {};
+    
+//     for (const litera of wyraz) {
+//         (obiekt[litera]) ? obiekt[litera]++ : obiekt[litera] = 1;
+//     };
+//     console.log(obiekt);
+    
 
+//     let liczbawystpien = 0;
+//     let literaLiczbyWystapien = '';
+
+//     for (const litera in obiekt) {
+//         if (obiekt[litera] > liczbawystpien){
+//            liczbawystpien = obiekt[litera];
+//             literaLiczbyWystapien = litera;
+//         }
+//     } console.log(literaLiczbyWystapien);
+     
+//     return literaLiczbyWystapien;
+
+// } ileRazysiePowtarza("oooillllee");
 
 
 
