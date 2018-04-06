@@ -41,6 +41,7 @@ function maxNumberOfLetters(string) {
             maxChar = letterOfMaxOccurences;
         }
     }
+    console.log(maxChar);
     return maxChar;
 };
 maxNumberOfLetters("Heeeello!");
