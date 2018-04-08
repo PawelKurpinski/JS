@@ -17,9 +17,13 @@ function chunk(array, size) {
       ]; /* last it's the last element in the new array chunked */
 
     if (!last || last.length === size) {
+      /*!last = if last does not exist OR it's length is equal to the size parameter */
       chunked.push([element]);
+    } else {
+      last.push(element);
     }
   }
+  return chunk;
 }
 
 // module.exports = chunk;
