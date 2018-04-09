@@ -8,6 +8,12 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+    let newObject = {};
+    for (const letter of stringA) {
+        (!newObject[letter]) ? newObject[letter]++: emptyObject[letter] = 1;
+    } console.log(newObject);
+    return newObject;
+}
 
-module.exports = anagrams;
+// module.exports = anagrams;
