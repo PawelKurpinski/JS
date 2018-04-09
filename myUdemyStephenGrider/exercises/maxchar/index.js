@@ -19,7 +19,8 @@ for (const i of str) {
 }
 
 // -----------------------------------------------------------------------------------------------
-// here we are creating (not checking something in a finished object) an object and checking if given letter we can see for the first time or not. Thr clue is that notation: objectWithLetters[letter] === objectWithLetters["letters"] becauce "letter" is already a string but at the same time a variable witch is changing with every loop. It would not work with ["letter"] notation. 
+// I. checking if given letter can we see for the first time or not (!objectOfLetters[i]) 
+// II. adding to object new pairs of elements. The clue is notation: objectWithLetters[letter] === objectWithLetters["letters"] becauce "letter" is already a string but at the same time a variable witch is changing with every loop. It would not work with ["letter"] notation. 
 
 function maxNumberOfLetters(string) {
     const objectWithLetters = {};
