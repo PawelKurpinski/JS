@@ -20,9 +20,7 @@ function anagrams(stringA, stringB) {
     if (aCharMap[char] !== bCharMap[char]) {
       return false;
     }
-  }
-
-  return true;
+  } return true;
 }
 
 function buildCharMap(str) {
@@ -30,8 +28,8 @@ function buildCharMap(str) {
 
   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
     charMap[char] = charMap[char] + 1 || 1;
-  } 
-  console.log(charMap);
+    } 
+  // console.log(charMap);                                            
   return charMap;
 }
 anagrams('rail safety', 'fairy tales');
