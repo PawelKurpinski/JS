@@ -9,28 +9,30 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  const aCharMap = buildCharMap(stringA);
+  const aCharMap = buildChar
+  Map(stringA);
   const bCharMap = buildCharMap(stringB);
 
   if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
     return false;
   }
 
-  for (let char in aCharMap) {   /* this is a helper function */
+  for (let char in aCharMap) {   
     if (aCharMap[char] !== bCharMap[char]) {
       return false;
     }
   } return true;
 }
 
-function buildCharMap(str) {
+function buildCharMap(str) { /* this is a helper function */
   const charMap = {};
 
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) { /* replace(/[^\w]/g, '') this allow us to get rid of spaces and punctation marks */
-    
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) { 
+  /* replace(/[^\w]/g, '') this allow us to get rid of spaces and punctation marks */
     charMap[char] = charMap[char] + 1 || 1;
     } 
   // console.log(charMap);                                            
   return charMap;
 }
+
 anagrams('rail safety', 'fairy tales');
