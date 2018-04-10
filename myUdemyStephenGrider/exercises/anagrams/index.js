@@ -16,7 +16,7 @@ function anagrams(stringA, stringB) {
     return false;
   }
 
-  for (let char in aCharMap) {
+  for (let char in aCharMap) {   /* this is a helper function */
     if (aCharMap[char] !== bCharMap[char]) {
       return false;
     }
@@ -26,7 +26,8 @@ function anagrams(stringA, stringB) {
 function buildCharMap(str) {
   const charMap = {};
 
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) { /* replace(/[^\w]/g, '') this allow us to get rid of spaces and punctation marks */
+    
     charMap[char] = charMap[char] + 1 || 1;
     } 
   // console.log(charMap);                                            
