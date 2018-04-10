@@ -16,7 +16,6 @@ function anagrams(stringA, stringB) {
     return false;
   } /* here we are comparing keys of two objects - if they are not equal -> return false */
 
-  
   for (let char in aCharMap) {   
     if (aCharMap[char] !== bCharMap[char]) {
       return false;
@@ -31,7 +30,7 @@ function buildCharMap(str) { /* this is a helper function */
   const charMap = {};
 
   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) { 
-  /* replace(/[^\w]/g, '') this allow us to get rid of spaces and punctation marks */
+  /* replace(/[^\w]/g, '') this allow us to get rid of spaces and punctation marks  */
     charMap[char] = charMap[char] + 1 || 1; /* add elemenets to object charMap */
     } 
   // console.log(charMap);                                          
