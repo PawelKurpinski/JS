@@ -18,7 +18,7 @@ function palindrome(str) {
 
 function palindromSecond(str){
    return str. split('').every((char, i) => { /* function will be called for evry element of the array; i is index and char is a single element of the array a letter */
-        return char === char[str.length- i - 1];
+        return char === char[str.length - i - 1];
     });
 } palindromSecond("Saomochód");
 

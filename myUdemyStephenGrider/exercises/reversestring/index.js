@@ -39,7 +39,7 @@ function reverse(str) {
     } return reversed;
   } reverse("apple");
 
-module.exports = reverse;
+// module.exports = reverse;
 
 //fourth option with something new ;) arrow function with reduce
 
@@ -47,7 +47,9 @@ function reverse(str) {
     return str.split('').reduce((reversed, char) => {
         return  char + reversed;
     }, '');
-}; reverse ("Paweł");
+}; console.log(reverse ("Paweł"));
+
+
 
 
 // redused of reduce function ;)
