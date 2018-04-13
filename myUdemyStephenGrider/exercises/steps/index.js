@@ -17,14 +17,21 @@
 //       '### '
 //       '####'
 
+// console.log("'#"+"# '");
+
+
 function steps(n) {
-    var stars = '';
-    for (let j = 0; j < n; j++) {
-        stars += "#";
-        console.log(stars);
-    }
-    return stars
-}
-steps(2);
+    var stars = "'";
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= n; j++) {
+            if (j == i) {
+                stars += "#";
+            } else if (j < n) {
+                stars += "";
+            } 
+        } 
+    } console.log(stars);
+};
+steps(3);
 
 // module.exports = steps;
