@@ -17,14 +17,30 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-    var stars = '';
-    for (let j = 0; j < n; j++) {
-        stars += "#";
-        console.log(stars);
+// function steps(n) {
+//   var stars = "";
+//   for (let j = 0; j < n; j++) {
+//     stars += "#";
+//     console.log(stars);
+//   }
+//   return stars;
+// }
+// steps(2);
+
+function stepsTwo(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = "";
+
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        stair += "#";
+      } else {
+        stair += " ";
+      }
     }
-    return stars
+    console.log(stair);
+  }
 }
-steps(2);
+stepsTwo(4);
 
 // module.exports = steps;
