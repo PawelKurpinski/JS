@@ -17,20 +17,22 @@
 //       '### '
 //       '####'
 
-// console.log("'#"+"# '");
+// console.log( "'" + "#"+' '+" '");
 
 
 function steps(n) {
-    var stars = "'";
     for (let i = 0; i < n; i++) {
+        var stars = "'";
         for (let j = 0; j <= n; j++) {
-            if (j == i) {
+            if (j <= i) {
                 stars += "#";
             } else if (j < n) {
-                stars += "";
-            } 
-        } 
-    } console.log(stars);
+                stars += " ";
+            } else if (j=n) {
+                stars += "'"
+            }
+        } console.log(stars);
+    } 
 };
 steps(3);
 
