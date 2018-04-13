@@ -40,12 +40,16 @@ index.js:23 Ala Ma Kota */
 // so we can't use "for of loop".
 
 function capitalizeTwo(str) {
-    let result = '';
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
-    }
-}
+    let result = str[0].toUpperCase();
+    for (let i = 1; i < str.length; i++) {
+        if (str[i - 1] === " ") {
+            result += str[i].toUpperCase();
+        } else {
+            result += str[i];
+        }
+    }  console.log(result); 
+    return result
+}; capitalizeTwo("jola ala Ela");
 
  
 
