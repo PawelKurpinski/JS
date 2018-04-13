@@ -18,11 +18,13 @@
 //       '####'
 
 function steps(n) {
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
+    var stars = '';
+    for (let j = 0; j < n; j++) {
+        stars += "#";
+        console.log(stars);
     }
-
+    return stars
 }
+steps(2);
 
 // module.exports = steps;
