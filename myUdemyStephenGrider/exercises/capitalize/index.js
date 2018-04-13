@@ -29,4 +29,24 @@ index.js:21 (2) ["Ala", "Ma"]
 index.js:21 (3) ["Ala", "Ma", "Kota"]
 index.js:23 Ala Ma Kota */
 
+// second solution--------------------------------------------------------------
+// 1. creating an empty string 'result'
+// 2. iterating through every character in the string
+// 3. next we will look at character on the left from the current one and check ``````if it is a space? 
+// 4. if so - capitalize this letter
+// 4.1 if not - without capitalizing add (not push! it's a string)it to 'result'
+// 5. Because we have a problem with the first character of the whole string we have to capitalize it "manually" (before first character there is no "typical space"). 
+// So we do not want to start with the first character of our loop process, 
+// so we can't use "for of loop".
+
+function capitalizeTwo(str) {
+    let result = '';
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        
+    }
+}
+
+ 
+
 // module.exports = capitalize;
