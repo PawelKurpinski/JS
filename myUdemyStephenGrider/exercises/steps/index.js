@@ -25,7 +25,7 @@
 //   }
 //   return stars;
 // }
-// steps(2);
+// stepddddsddddddddddddddd(2);
 
 function stepsTwo(n) {
   for (let row = 0; row < n; row++) {
