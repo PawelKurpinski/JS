@@ -31,20 +31,20 @@ chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
 
 // // second idea
 
-// function chunkSecond(array, size) {
-//   const chunkedTwo = [];
-//   let index = 0;
-//   while (index < array.length) {
-//     chunkedTwo.push(array.slice(index, index + size));
-//     index += size;
-//     console.log(chunkedTwo);
-//   }
-//   console.log(chunkedTwo);
-//   return chunkedTwo;
-// }
+function chunkSecond(array, size) {
+  const chunkedTwo = [];
+  let index = 0;
+  while (index < array.length) {
+    chunkedTwo.push(array.slice(index, index + size));
+    index += size;
+    console.log(chunkedTwo);
+  }
+  console.log(chunkedTwo);
+  return chunkedTwo;
+}
 
-// chunkSecond([1, 2, 3, 4, 5], 2);
-// //  --> [[ 1, 2], [3, 4], [5]]
+chunkSecond([1, 2, 3, 4, 5], 2);
+//  --> [[ 1, 2], [3, 4], [5]]
 
 // // module.exports = chunk;
 
