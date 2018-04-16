@@ -17,26 +17,6 @@
 //       '### '
 //       '####'
 
-<<<<<<< HEAD
-// console.log( "'" + "#"+' '+" '");
-
-
-function steps(n) {
-    for (let i = 0; i < n; i++) {
-        var stars = "'";
-        for (let j = 0; j <= n; j++) {
-            if (j <= i) {
-                stars += "#";
-            } else if (j < n) {
-                stars += " ";
-            } else if (j=n) {
-                stars += "'"
-            }
-        } console.log(stars);
-    } 
-};
-steps(4);
-=======
 // function steps(n) {
 //   var stars = "";
 //   for (let j = 0; j < n; j++) {
@@ -45,7 +25,7 @@ steps(4);
 //   }
 //   return stars;
 // }
-// stepddddsddddddddddddddd(2);
+// step(2);
 
 function stepsTwo(n) {
   for (let row = 0; row < n; row++) {
@@ -62,6 +42,5 @@ function stepsTwo(n) {
   }
 }
 stepsTwo(4);
->>>>>>> 463ea63b930feacd077722a2a88eb3b13f22b2b7
 
 // module.exports = steps;
