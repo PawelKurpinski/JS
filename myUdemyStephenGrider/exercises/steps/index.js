@@ -46,6 +46,12 @@ stepsTwo(4);
 // module.exports = steps;
 
 
-function draw(n) {
-    
-}
+// function draw(n) {
+//     for (let rows = 0; rows < n; rows++) {
+//         var stars = '';
+//         for (let cols = 0; cols < n; cols++) {
+//             (cols <= rows) ? stars += "#" : stars += " ";
+//             }  console.log(stars); 
+//         }  
+//     }; 
+//     draw(4);
