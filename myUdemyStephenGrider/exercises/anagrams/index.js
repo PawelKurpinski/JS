@@ -25,7 +25,6 @@ function anagrams(stringA, stringB) {
 }
 
 
-
 function buildCharMap(str) { /* this is a helper function */
 
   const charMap = {};

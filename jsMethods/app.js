@@ -12,7 +12,6 @@ buttonMinus.onclick = dec;
 
 var header = document.getElementById("test");
 
-
 // function zamienKolor() {
 //     this.style.color = "red";
 // }
