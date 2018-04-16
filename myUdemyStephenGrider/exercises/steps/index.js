@@ -17,6 +17,7 @@
 //       '### '
 //       '####'
 
+<<<<<<< HEAD
 // console.log( "'" + "#"+' '+" '");
 
 
@@ -35,5 +36,32 @@ function steps(n) {
     } 
 };
 steps(4);
+=======
+// function steps(n) {
+//   var stars = "";
+//   for (let j = 0; j < n; j++) {
+//     stars += "#";
+//     console.log(stars);
+//   }
+//   return stars;
+// }
+// stepddddsddddddddddddddd(2);
+
+function stepsTwo(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = "";
+
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        stair += "#";
+      } else {
+        stair += " ";
+      }
+    }
+    console.log(stair);
+  }
+}
+stepsTwo(4);
+>>>>>>> 463ea63b930feacd077722a2a88eb3b13f22b2b7
 
 // module.exports = steps;
