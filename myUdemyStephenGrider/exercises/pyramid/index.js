@@ -23,8 +23,7 @@ function pyramid(n) {
             } else {
                 stair += "#";
             }
-        } console.log(stair); 
-        
+        } console.log(stair);    
     }
 }
 pyramid(3);
