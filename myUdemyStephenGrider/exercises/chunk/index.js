@@ -22,8 +22,8 @@ function chunk(array, size) {
     } else {
       last.push(element);
     }
-    console.log(chunked);
-  }
+    
+  } console.log(chunked);
   return chunked;
 }
 chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
