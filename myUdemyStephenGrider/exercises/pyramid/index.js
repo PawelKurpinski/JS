@@ -34,16 +34,17 @@
 
 
 function pyramid(n) {
+    let mid = Math.floor(2*n - 1)/2;
     for (let row = 0; row < n ; row++) {
-        let stair = '';
+        let level = '';
 
         for (let col = 0; col < 2*n - 1; col++) {
-            if (row == 0 && col/2==1)  {
-                stair += "#";
+            if (mid - row <= col && mid + row >= col){
+                level += "#";
             } else {
-                stair += " ";
+                level += ' ';
             } 
-        } console.log(stair);    
+        } console.log(level);    
     }
 }
 pyramid(3);
