@@ -15,13 +15,13 @@
 //       '#####'
 
 function pyramid(n) {
-    for (let row = 0; row < n; row++) {
+    for (let row = 0; row < n ; row++) {
         let stair = "";
-        for (let col = 0; col < (n - 1); col++) {
-            if (col == row || col >= row || (col-2) == row) {
-                stair += "";
-            } else {
+        for (let col = 0; col < (n + (n-1)); col++) {
+            if () {
                 stair += "#";
+            } else {
+                stair += " ";
             }
         } console.log(stair);    
     }
