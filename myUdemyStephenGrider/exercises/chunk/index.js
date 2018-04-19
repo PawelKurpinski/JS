@@ -28,6 +28,7 @@ function chunk(array, size) {
 }
 chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
 
+
 // // second idea
 
 // function chunkSecond(array, size) {
@@ -46,3 +47,4 @@ chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
 // //  --> [[ 1, 2], [3, 4], [5]]
 
 // // module.exports = chunk;
+
