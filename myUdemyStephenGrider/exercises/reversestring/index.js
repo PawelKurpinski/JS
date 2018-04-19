@@ -16,7 +16,7 @@
 // first option----------------------------------------------------
 
 function reverseOne(str) {
-    return str.split("").reverse().join(""); /* split nie zadziała bez "" a join bez nich da przecinki */
+    return str.split("").reverse().join(""); /* split will not work without "" and join without "" takes ',' automatically */
 } console.log(reverse("apple"));
 
 // second option---------------------------------------------------
