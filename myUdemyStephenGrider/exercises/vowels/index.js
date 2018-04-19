@@ -8,7 +8,12 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-    
-}
+    var vowelCounter = 0;
+    for (const letter of str) {
+        if (letter === "a"||"e"||"i"||"o"||"u") {
+            vowelCounter += 1;
+        }
+    } console.log(vowelCounter);  
+} vowels("Hi There!");
 
-module.exports = vowels;
+// module.exports = vowels;
