@@ -48,7 +48,7 @@ stepsTwo(4);
 // second solution
 
 function printNumber(n) {
-    if (n===10) {
+    if (n<=10) {
         return
     };
     console.log(n);
