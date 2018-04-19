@@ -37,7 +37,7 @@ function buildCharMap(str) { /* this is a helper function */
   // console.log(charMap);                                          
   return charMap;
 }
-
+ 
 anagrams('rail safety', 'fairy tales');
 
 

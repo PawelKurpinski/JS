@@ -45,13 +45,13 @@ stepsTwo(4);
 
 // module.exports = steps;
 
+// second solution
 
-// function draw(n) {
-//     for (let rows = 0; rows < n; rows++) {
-//         var stars = '';
-//         for (let cols = 0; cols < n; cols++) {
-//             (cols <= rows) ? stars += "#" : stars += " ";
-//             }  console.log(stars); 
-//         }  
-//     }; 
-//     draw(4);
+function printNumber(n) {
+    if (n===10) {
+        return
+    };
+    console.log(n);
+    
+    printNumber(n+1);
+}; printNumber(1);
