@@ -14,36 +14,19 @@
 //       ' ### '
 //       '#####'
 
-// function pyramid(n) {
-//     let mid = Math.floor((2*n - 1)/2);
+function pyramid(n) {
+    let mid = Math.floor((2*n - 1)/2);
    
-//     for (let row = 0; row < n ; row++) {
-//         let level = '';
+    for (let row = 0; row < n ; row++) {
+        let level = '';
 
-//         for (let col = 0; col < 2*n - 1; col++) {
-//             if (mid - row <= col && mid + row >= col){
-//                 level += "#";
-//             } else {
-//                 level += ' ';
-//             } 
-//         } console.log(level);    
-//     }
-// }
-// pyramid(3);
-
-
-function pyramid2(n) {
-    let cols = 2*n-1;
-    let midCol = Math.floor((2*n-1)/2);
-    for (let row = 0; row < n; row++) {
-        let egg = '';
-        for (let col = 0; col < array.length; col++) {
-          if (midCol - row <= col && mid + row >= col) {
-              egg += '#';
-          } else {
-              egg += '';
-          }
-        } console.log(egg);
-        
+        for (let col = 0; col < 2*n - 1; col++) {
+            if (mid - row <= col && mid + row >= col){
+                level += "#";
+            } else {
+                level += ' ';
+            } 
+        } console.log(level);    
     }
-} pyramid2(3);
+}
+pyramid(3);

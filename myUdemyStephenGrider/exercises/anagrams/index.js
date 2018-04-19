@@ -30,7 +30,8 @@ function buildCharMap(str) { /* this is a helper function */
   const charMap = {};
 
   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-    /* replace(/[^\w]/g, '') this allows us to get rid of the spaces and punctation marks. In other words - everything that is not a number or a character we want to replace with an empty string*/
+    /* replace(/[^\w]/g, '') allows us to get rid of the spaces and punctation marks. 
+    In other words - everything that is not a number or a character we want to replace with an empty string*/
     charMap[char] = charMap[char] + 1 || 1; /* add elemenets to object charMap */
   }
   // console.log(charMap);                                          
