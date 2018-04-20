@@ -59,7 +59,7 @@ function vowels(str) {
     const checker = ['a', 'e', 'i', 'o', 'u']
     for (const letter of str.toLowerCase()) {
         if (checker.includes(letter)) {
-            
+            vowelCounter++;
         }
     }
     return vowelCounter;
