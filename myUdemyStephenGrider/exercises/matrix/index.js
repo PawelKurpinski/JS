@@ -15,6 +15,22 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+/* another important thing! I can asign a value to an empty array without pushing anything! for example:
+cosnt arr = [];
+arr[3] = "Wow!"
+console.log(arr[3]) => "Wow!"
+*/
 
-module.exports = matrix;
+function matrix(n) {
+// 1. create an empty array results
+// 2. push into it "n" subarrays
+    const results = [];
+    for (let i = 0; i < n; i++) {
+        results.push([]);
+    } 
+    
+}; matrix(3);
+
+// module.exports = matrix;
+
+
