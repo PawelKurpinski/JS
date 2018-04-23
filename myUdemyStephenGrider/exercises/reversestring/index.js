@@ -46,14 +46,11 @@ function reverse(str) {
 function reverse(str) {
     return str.split('').reduce((reversed, char) => {
         return  char + reversed;
-        console.log(char + reversed);
     }, '');
 }; console.log(reverse ("Paweł"));
-
-
-
 
 // redused of reduce function ;)
 function reverse(str) {
     return str.split('').reduce((rev, char) => char + rev, '');
 }; reverse ("Paweł");
+
