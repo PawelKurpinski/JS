@@ -28,46 +28,58 @@ console.log(arr[3]) => "Wow!"
 function drawTables(n) {
     let table = [];
     let sign = '';
-    for (var i = 0; i < n; i++) {
+    
         for (var j = 0; j < n; j++) {
-            table[i] = [];
+            table[j] = [];
         }
-    };
    
+    console.log(table);
+    
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
-            table[i][j] = i + ', ' + j;
+            table[i][j] = 0;
         } 
-    }    
+    }  
+    
+    
     
     // how to show an array
 
-    for (var i = 0; i < n; i++) {
-        for (var j = 0; j < n; j++) {
-            sign += table[i][j] + "  |  ";
-        }
-        sign += '<br>';
-    } document.write(sign);
+    // for (var i = 0; i < n; i++) {
+    //     for (var j = 0; j < n; j++) {
+    //         sign += table[i][j] + "  |  ";
+    //     }
+    //     sign += '<br>';
+    // } document.write(sign);
 }; drawTables(4);
 
 
+// ------------------------------------------------
 
+
+var table = [];
 function drawTable(n) {
     let sign = '';
-    let table = [];
     let smallTable = [];
     
     for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
             table.push([]);
-        }
     };
     console.log(table);
+
+
+function asignNum(n) {
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        
+    }
+}
 
 }; 
 drawTable(4);
     
-    
+ 
+
     // how to show an array
 
     // for (var i = 0; i < n; i++) {
