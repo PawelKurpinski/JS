@@ -28,21 +28,37 @@ console.log(arr[3]) => "Wow!"
 function drawTables(n) {
     let table = [];
     let sign = '';
-    
-        for (var j = 0; j < n; j++) {
-            table[j] = [];
-        }
-   
+
+    for (var j = 0; j < n; j++) {
+        table[j] = [];
+    }
+
     console.log(table);
-    
+
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
             table[i][j] = 0;
-        } 
-    }  
-    
-    
-    
+        }
+    }
+
+    let startRow = 0;
+    let startCol = 0;
+    let endRow = n - 1;
+    let endCol = n - 1;
+    let counter = 1;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            while (table[i][j] === 0) {
+                while (startCol <= endCol && startRow <= endRow)
+                    for (let i = startCol; i <= endCol; i++) {
+
+
+                }
+            }
+        }
+    };
+
     // how to show an array
 
     // for (var i = 0; i < n; i++) {
@@ -51,43 +67,45 @@ function drawTables(n) {
     //     }
     //     sign += '<br>';
     // } document.write(sign);
-}; drawTables(4);
+};
+drawTables(4);
 
 
 // ------------------------------------------------
 
 
 var table = [];
+
 function drawTable(n) {
     let sign = '';
     let smallTable = [];
-    
+
     for (let i = 0; i < n; i++) {
-            table.push([]);
+        table.push([]);
     };
     console.log(table);
 
 
-function asignNum(n) {
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        
+    function asignNum(n) {
+        for (let i = 0; i < array.length; i++) {
+
+
+        }
     }
-}
 
-}; 
+};
 drawTable(4);
-    
- 
 
-    // how to show an array
 
-    // for (var i = 0; i < n; i++) {
-    //     for (var j = 0; j < n; j++) {
-    //         sign += table[i] + "  |  ";
-    //     }
-    //     sign += '<br>';
-    // } document.write(sign);
+
+// how to show an array
+
+// for (var i = 0; i < n; i++) {
+//     for (var j = 0; j < n; j++) {
+//         sign += table[i] + "  |  ";
+//     }
+//     sign += '<br>';
+// } document.write(sign);
 // }
 
 
@@ -111,7 +129,7 @@ function matrix(n) {
     let counter = 1; /* this is the value that we will increment to have in our arrays */
     // 4. create a number of variables that keep track of the current column
     let startColumn = 0;
-    let endColumn = n - 1; 
+    let endColumn = n - 1;
     /* these all ensd and start are not fixed values! */
     let startRow = 0;
     let endRow = n - 1;
@@ -122,26 +140,26 @@ function matrix(n) {
             results[startRow][i] = counter;
             counter++;
         };
-        startRow++; 
+        startRow++;
         /* changing the row for the next one */
         //  7. the second "for loop" will be responsible for the column on the right hand side.(from row 1 to 2 on the right hand side in END column! number: 4 and 5)     
         for (let i = startRow; i <= endRow; i++) {
             results[i][endColumn] = counter;
             counter++;
-        } 
+        }
         endColumn--;
         // 8. third loop will be responsible for the elements on the bootom-left values 6 and 7 and we're substracting the column
         for (let i = endColumn; i >= startColumn; i--) {
-          results[endRow][i] = counter;
-          counter++;  
-        } 
+            results[endRow][i] = counter;
+            counter++;
+        }
         endRow--;
         // 9. the last - for loop will add values at  the left hand side 8
         for (let i = endRow; i >= startRow; i--) {
             results[i][startColumn] = counter;
             counter++;
-          }
-          startColumn++;
+        }
+        startColumn++;
         //10. The last value - the biggest one will add the second cycle of the while lopp. We are incrementing the column. In this case with 3 by 3 we will have all the values = 1;  
     }
     return results;
