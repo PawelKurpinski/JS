@@ -25,6 +25,69 @@ console.log(arr[3]) => "Wow!"
    8 9 4
    7 6 5 */
 
+function drawTables(n) {
+    let table = [];
+    let sign = '';
+    for (var i = 0; i < n; i++) {
+        for (var j = 0; j < n; j++) {
+            table[i] = [];
+        }
+    };
+   
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            table[i][j] = i + ', ' + j;
+        } 
+    }    
+    
+    // how to show an array
+
+    for (var i = 0; i < n; i++) {
+        for (var j = 0; j < n; j++) {
+            sign += table[i][j] + "  |  ";
+        }
+        sign += '<br>';
+    } document.write(sign);
+}; drawTables(4);
+
+
+
+function drawTable(n) {
+    let sign = '';
+    let table = [];
+    let smallTable = [];
+    
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            table.push([]);
+        }
+    };
+    console.log(table);
+
+}; 
+drawTable(4);
+    
+    
+    // how to show an array
+
+    // for (var i = 0; i < n; i++) {
+    //     for (var j = 0; j < n; j++) {
+    //         sign += table[i] + "  |  ";
+    //     }
+    //     sign += '<br>';
+    // } document.write(sign);
+// }
+
+
+
+
+
+
+
+
+
+
+
 function matrix(n) {
     // 1. create an empty array results
     // 2. push into it "n" subarrays
