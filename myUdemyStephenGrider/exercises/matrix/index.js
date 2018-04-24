@@ -27,74 +27,69 @@ console.log(arr[3]) => "Wow!"
 
 function drawTables(n) {
     let table = [];
-    let sign = '';
 
     for (var j = 0; j < n; j++) {
         table[j] = [];
-    }
-
-    console.log(table);
+    };
 
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n; j++) {
             table[i][j] = 0;
         }
-    }
-
-    let startRow = 0;
-    let startCol = 0;
-    let endRow = n - 1;
-    let endCol = n - 1;
-    let counter = 1;
-
-    for (let i = 0; i < n; i++) {
-        for (let j = 0; j < n; j++) {
-            while (table[i][j] === 0) {
-                while (startCol <= endCol && startRow <= endRow)
-                    for (let i = startCol; i <= endCol; i++) {
-
-
-                }
-            }
-        }
     };
 
-    // how to show an array
+    let startY = 0;
+    let startX = 0;
+    let endX = n - 1;
+    let endY = n - 1;
+    let counter = 1;
 
-    // for (var i = 0; i < n; i++) {
-    //     for (var j = 0; j < n; j++) {
-    //         sign += table[i][j] + "  |  ";
-    //     }
-    //     sign += '<br>';
-    // } document.write(sign);
-};
+            while (startX <= endX && startY <= endY) {
+                for (let i = startX; i <= endX; i++) {
+                    table[startY][i] = counter;
+                    console.log(table);
+                    counter++;
+                } 
+    } return table;
+}
 drawTables(4);
+
+// how to show an array
+
+// for (var i = 0; i < n; i++) {
+//     for (var j = 0; j < n; j++) {
+//         sign += table[i][j] + "  |  ";
+//     }
+//     sign += '<br>';
+// } document.write(sign);
+
+// } 
 
 
 // ------------------------------------------------
 
 
-var table = [];
+// var table = [];
 
-function drawTable(n) {
-    let sign = '';
-    let smallTable = [];
+// function drawTable(n) {
+//     let sign = '';
+//     let smallTable = [];
 
-    for (let i = 0; i < n; i++) {
-        table.push([]);
-    };
-    console.log(table);
-
-
-    function asignNum(n) {
-        for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < n; i++) {
+//         table.push([]);
+//     };
+//     console.log(table);
 
 
-        }
-    }
+//     function asignNum(n) {
+//         for (let i = 0; i < array.length; i++) {
 
-};
-drawTable(4);
+
+//         }
+//     }
+
+// };
+// drawTable(4);
 
 
 
