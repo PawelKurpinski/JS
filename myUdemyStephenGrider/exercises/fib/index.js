@@ -22,7 +22,6 @@ function fibo(n) {
     }; 
     console.log(array)
     return array;
-    
 } fibo(10);
 
 // module.exports = fib;
