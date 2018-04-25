@@ -49,10 +49,8 @@ function reverse(str) {
     }, '');
 }; console.log(reverse ("Paweł"));
 
-
-
-
 // redused of reduce function ;)
 function reverse(str) {
     return str.split('').reduce((rev, char) => char + rev, '');
 }; reverse ("Paweł");
+

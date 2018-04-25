@@ -21,15 +21,16 @@ function chunk(array, size) {
       chunked.push([element]);
     } else {
       last.push(element);
+      /* ATTENTION! we can use push method despite the fact that last wasn't declared as an array because:
+      chunked.length = 1; chunked.length - 1 = 0 and chunked[0] is not 1 THAN [1] !!  */
     }
-    
-  } console.log(chunked);
+  }
+  console.log(chunked);
   return chunked;
 }
-chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
+// chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
 
-
-// // second idea
+// // second idea---------------------------------------------------------------------------------------------------------------
 
 function chunkSecond(array, size) {
   const chunkedTwo = [];
@@ -47,4 +48,3 @@ chunkSecond([1, 2, 3, 4, 5], 2);
 //  --> [[ 1, 2], [3, 4], [5]]
 
 // // module.exports = chunk;
-
