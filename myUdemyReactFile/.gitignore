@@ -1,5 +1,4 @@
-node_modules/*
-.sass-cache/*
+node_modules
 gulpfile.js
 sass/style2.scss
 css/style2.css
