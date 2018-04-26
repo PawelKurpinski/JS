@@ -1,27 +1,18 @@
-var path = require('path');
-
+//Konfiguracja Webpack
 module.exports = {
-
-    entry: path.resolve(__dirname, 'src') + '/app/index.js',
+    entry: ["script.jsx"],
     output: {
-        path: path.resolve(__dirname, 'dist') + '/app',
-        filename: 'bundle.js',
-        publicPath: '/app/'
+        filename: "out.js"
     },
+    watch: true,
     module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                include: path.resolve(__dirname, 'src'),
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
+        loaders: [{
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['es2015', 'stage-2', 'react']
             }
-        ]
+        }]
     }
-};
+}
