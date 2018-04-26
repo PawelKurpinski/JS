@@ -1,8 +1,8 @@
 //Konfiguracja Webpack
 module.exports = {
-    entry: ["./js/script.jsx"],
+    entry: ["script.jsx"],
     output: {
-        filename: "./js/out.js"
+        filename: "out.js"
     },
     watch: true,
     module: {
