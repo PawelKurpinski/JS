@@ -1,0 +1,23 @@
+{
+  "name": "reactTestF",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
