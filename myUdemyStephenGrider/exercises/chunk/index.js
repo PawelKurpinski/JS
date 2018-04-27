@@ -20,7 +20,7 @@ function chunk(array, size) {
       /*!last = if last does not exist OR it's length is equal to the size parameter */
       chunked.push([element]);
     } else {
-      last.push(element); 
+      last.push(element);
       /* ATTENTION! we can use push method despite the fact that last wasn't declared as an array because:
       chunked.length = 1; chunked.length - 1 = 0 and chunked[0] is not 1 THAN [1] !!  */
     }
@@ -48,6 +48,3 @@ chunkSecond([1, 2, 3, 4, 5], 2);
 //  --> [[ 1, 2], [3, 4], [5]]
 
 // // module.exports = chunk;
-
-
-

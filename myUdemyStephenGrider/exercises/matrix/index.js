@@ -26,63 +26,59 @@ console.log(arr[3]) => "Wow!"
    7 6 5 */
 
 function drawTables(n) {
-    // let table = [];
+  // let table = [];
 
-    // for (var j = 0; j < n; j++) {
-    //     table[j] = [];
-    // };
+  // for (var j = 0; j < n; j++) {
+  //     table[j] = [];
+  // };
 
-    // for (let i = 0; i < n; i++) {
-    //     for (let j = 0; j < n; j++) {
-    //         table[i][j] = 0;
-    //     }
-    // };
+  // for (let i = 0; i < n; i++) {
+  //     for (let j = 0; j < n; j++) {
+  //         table[i][j] = 0;
+  //     }
+  // };
 
-    const table = [];
-  
-    for (let i = 0; i < n; i++) {
-      table.push([]);
+  const table = [];
+
+  for (let i = 0; i < n; i++) {
+    table.push([]);
+  }
+
+  let startY = 0;
+  let startX = 0;
+  let endX = n - 1;
+  let endY = n - 1;
+  let counter = 1;
+
+  while (startX <= endX && startY <= endY) {
+    for (let i = startX; i <= endX; i++) {
+      table[startY][i] = counter;
+      counter++;
     }
+    startY++;
 
-    let startY = 0;
-    let startX = 0;
-    let endX = n - 1;
-    let endY = n - 1;
-    let counter = 1;
+    for (let i = startY; i <= endY; i++) {
+      table[i][endX] = counter;
+      counter++;
+    }
+    endX--;
 
-            while (startX <= endX && startY <= endY) {
-                for (let i = startX; i <= endX; i++) {
-                    table[startY][i] = counter;
-                    counter++;
-                } startY++;
+    for (let i = endX; i >= startX; i--) {
+      table[endY][i] = counter;
+      counter++;
+    }
+    endY--;
 
-                for (let i = startY; i <= endY; i++) {
-                    table[i][endX] = counter;
-                    counter++;
-                } endX--;
-
-                for (let i = endX; i >= startX ; i--) {
-                    table[endY][i] = counter;
-                    counter++
-                } endY--;
-
-                for (let i = endY; i >= startY; i--) {
-                    table[i][startX] = counter;
-                    counter++
-                } startX++;
-    } 
-    console.log(table);  
-    return table;
+    for (let i = endY; i >= startY; i--) {
+      table[i][startX] = counter;
+      counter++;
+    }
+    startX++;
+  }
+  console.log(table);
+  return table;
 }
 drawTables(3);
-
-
-
-
-
-
-
-
 
 // function matrix(n) {
 //     // 1. create an empty array results
@@ -108,7 +104,7 @@ drawTables(3);
 //         };
 //         startRow++;
 //         /* changing the row for the next one */
-//         //  7. the second "for loop" will be responsible for the column on the right hand side.(from row 1 to 2 on the right hand side in END column! number: 4 and 5)     
+//         //  7. the second "for loop" will be responsible for the column on the right hand side.(from row 1 to 2 on the right hand side in END column! number: 4 and 5)
 //         for (let i = startRow; i <= endRow; i++) {
 //             results[i][endColumn] = counter;
 //             counter++;
@@ -126,7 +122,7 @@ drawTables(3);
 //             counter++;
 //         }
 //         startColumn++;
-//         //10. The last value - the biggest one will add the second cycle of the while lopp. We are incrementing the column. In this case with 3 by 3 we will have all the values = 1;  
+//         //10. The last value - the biggest one will add the second cycle of the while lopp. We are incrementing the column. In this case with 3 by 3 we will have all the values = 1;
 //     }
 //     console.log(results);
 //     return results;
@@ -135,43 +131,54 @@ drawTables(3);
 
 // module.exports = matrix;
 
-
 var x = 0;
 var y = 0;
 
 function spiralMatrix(par) {
-    var matrixSpiral = new Array(par);
-    for (var i = 0; i < par; i++) {
-        matrixSpiral[i] = new Array(par);
+  var matrixSpiral = new Array(par);
+  for (var i = 0; i < par; i++) {
+    matrixSpiral[i] = new Array(par);
+  }
+  var movementDirection = "right"; // right, down, left, up - y++, x++, y--, x--
+
+  for (var k = 1; k <= par * par; k++) {
+    matrixSpiral[x][y] = k;
+    if (
+      movementDirection == "right" &&
+      (y + 1 >= matrixSpiral.length || matrixSpiral[x][y + 1] != undefined)
+    ) {
+      movementDirection = "down";
+    } else if (
+      movementDirection == "down" &&
+      (x + 1 >= matrixSpiral.length || matrixSpiral[x + 1][y] != undefined)
+    ) {
+      movementDirection = "left";
+    } else if (
+      movementDirection == "left" &&
+      (y - 1 < 0 || matrixSpiral[x][y - 1] != undefined)
+    ) {
+      movementDirection = "up";
+    } else if (
+      movementDirection == "up" &&
+      (x - 1 < 0 || matrixSpiral[x - 1][y] != undefined)
+    ) {
+      movementDirection = "right";
     }
-    var movementDirection = "right"; // right, down, left, up - y++, x++, y--, x--
-    
-    for (var k = 1; k <= par * par; k++) {
-        matrixSpiral[x][y] = k;
-        if (movementDirection == "right" && (y + 1 >= matrixSpiral.length || matrixSpiral[x][y + 1] != undefined)) {
-            movementDirection = "down";
-        } else if (movementDirection == "down" && (x + 1 >= matrixSpiral.length || matrixSpiral[x + 1][y] != undefined) ) {
-            movementDirection = "left";
-        } else if (movementDirection == "left" && (y - 1 < 0 || matrixSpiral[x][y - 1] != undefined)) {
-            movementDirection = "up";
-        } else if (movementDirection == "up" && (x - 1 < 0 || matrixSpiral[x - 1][y] != undefined)) {
-            movementDirection = "right";
-        }
-        makeMovement(movementDirection)               
-    }
-    return matrixSpiral;
+    makeMovement(movementDirection);
+  }
+  return matrixSpiral;
 }
 
 function makeMovement(movementDirection) {
-    if (movementDirection == "right") {
-        y++;
-    } else if (movementDirection == "down") {
-        x++;
-    } else if (movementDirection == "left") {
-        y--;
-    } else if (movementDirection == "up") {
-        x--;
-    }
+  if (movementDirection == "right") {
+    y++;
+  } else if (movementDirection == "down") {
+    x++;
+  } else if (movementDirection == "left") {
+    y--;
+  } else if (movementDirection == "up") {
+    x--;
+  }
 }
 
 console.log(spiralMatrix(4));

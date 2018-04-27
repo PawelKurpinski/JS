@@ -7,20 +7,27 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-
-// first solution - quite interesting 
+// first solution - quite interesting
 
 function palindrome(str) {
-    return str === str.split('').reverse().join('');
-}; palindrome("dom");
+  return (
+    str ===
+    str
+      .split("")
+      .reverse()
+      .join("")
+  );
+}
+palindrome("dom");
 
 // second option
 
-function palindromSecond(str){
-   return str. split('').every((char, i) => { /* function will be called for evry element of the array; i is index and char is a single element of the array a letter */
-        return char === char[str.length - i - 1];
-    });
-} palindromSecond("Saomochód");
+function palindromSecond(str) {
+  return str.split("").every((char, i) => {
+    /* function will be called for evry element of the array; i is index and char is a single element of the array a letter */
+    return char === char[str.length - i - 1];
+  });
+}
+palindromSecond("Saomochód");
 
 module.exports = palindrome;
-
