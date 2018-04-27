@@ -25,3 +25,15 @@ function fibo(n) {
 } fibo(10);
 
 // module.exports = fib;
+
+
+// second solution--------------------------------------------------------------
+
+
+function fibonacci(n) {
+    if (n<2) {
+        return n;
+    }
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+    fibonacci(8)
