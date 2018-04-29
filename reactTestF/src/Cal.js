@@ -20,3 +20,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* here I'm using an opportunity when I can renden only the variable */
+pawelkur;
