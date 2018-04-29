@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 document.addEventListener("DOMContentLoaded", function() {
-  const numberA = parseInt(prompt("wpisz A"));
-  const numberB = parseInt(prompt("wpisz B"));
+  const numberA = parseInt(prompt("wpisz pierwszą liczbę"));
+  const numberB = parseInt(prompt("wpisz grugą liczbę"));
   const calculation = prompt("wpisz znak +,-,* lub /");
   let info;
   if (calculation == "+") {
@@ -18,3 +18,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   ReactDOM.render(<div>{info}</div>, document.getElementById("app2"));
 });
+
+/* here I'm using an opportunity when I can renden only the variable */
