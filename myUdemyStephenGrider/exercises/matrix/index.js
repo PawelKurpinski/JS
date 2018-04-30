@@ -131,7 +131,7 @@ drawTables(3);
 
 // module.exports = matrix;
 
-var x = 0;
+var x = 0; /* these are the start values */
 var y = 0;
 
 function spiralMatrix(par) {
@@ -140,28 +140,21 @@ function spiralMatrix(par) {
     matrixSpiral[i] = new Array(par);
   }
   var movementDirection = "right"; // right, down, left, up - y++, x++, y--, x--
+  /* this is the premiss at the beginning - we start with the right movement */
 
   for (var k = 1; k <= par * par; k++) {
-    matrixSpiral[x][y] = k;
+    matrixSpiral[x][y] = k; /* here we start with are the start values */
     if (
-      movementDirection == "right" &&
-      (y + 1 >= matrixSpiral.length || matrixSpiral[x][y + 1] != undefined)
-    ) {
+      movementDirection == "right" && (y + 1 >= matrixSpiral.length || matrixSpiral[x][y + 1] != undefined)) {
       movementDirection = "down";
     } else if (
-      movementDirection == "down" &&
-      (x + 1 >= matrixSpiral.length || matrixSpiral[x + 1][y] != undefined)
-    ) {
+      movementDirection == "down" && (x + 1 >= matrixSpiral.length || matrixSpiral[x + 1][y] != undefined)) {
       movementDirection = "left";
     } else if (
-      movementDirection == "left" &&
-      (y - 1 < 0 || matrixSpiral[x][y - 1] != undefined)
-    ) {
+      movementDirection == "left" && (y - 1 < 0 || matrixSpiral[x][y - 1] != undefined)) {
       movementDirection = "up";
     } else if (
-      movementDirection == "up" &&
-      (x - 1 < 0 || matrixSpiral[x - 1][y] != undefined)
-    ) {
+      movementDirection == "up" && (x - 1 < 0 || matrixSpiral[x - 1][y] != undefined)) {
       movementDirection = "right";
     }
     makeMovement(movementDirection);
