@@ -20,12 +20,16 @@ for (const i of str) {
 
 // -----------------------------------------------------------------------------------------------
 // I. checking if given letter can we see for the first time or not (!objectOfLetters[i]) 
-// II. adding to object new pairs of elements. The clue is notation: objectWithLetters[letter] === objectWithLetters["letters"] becauce "letter" is already a string but at the same time a variable witch is changing with every loop. It would not work with ["letter"] notation. 
+// II. adding to object new pairs of elements. 
+// The clue is notation: objectWithLetters[letter] === objectWithLetters["letters"] 
+// becauce "letter" is already a string but at the same time a variable witch is changing with every loop. 
+// It would not work with ["letter"] notation. 
 
 function maxNumberOfLetters(string) {
-    const objectWithLetters = {};
+    const objectWithLetters = {}; /* this is an empty object */
     for (let letter of string) {
         (objectWithLetters[letter]) ? objectWithLetters[letter]++: objectWithLetters[letter] = 1;
+        /* here we are creating the inside of the object with "1" or incrementing its value */
     }
     console.log(objectWithLetters);
 
@@ -76,3 +80,10 @@ maxNumberOfLetters("Heeeello!");
 
 
 // module.exports = maxChar;
+
+function maxValue(string) {
+    let obiekcik = {};
+    for (const litera of string) {
+        (obiekcik[litera])? obiekcik[litera]++ : obiekcik[litera]++;
+    } return obiekcik;
+}
