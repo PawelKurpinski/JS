@@ -30,4 +30,4 @@ function palindromSecond(str) {
 }
 palindromSecond("Saomochód");
 
-module.exports = palindrome;
+// module.exports = palindrome;

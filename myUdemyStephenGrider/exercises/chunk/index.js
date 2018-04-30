@@ -17,7 +17,8 @@ function chunk(array, size) {
     const last = chunked[chunked.length - 1];
     /* last it's the last element in the new array chunked */
     if (!last || last.length === size) {
-      /*!last = if last does not exist OR it's length is equal to the size parameter */
+      /*!last = if last does not exist OR it's length (it's alerady an array because of
+       const last = chunked[chunked.length - 1] ) is equal to the size parameter */
       chunked.push([element]);
     } else {
       last.push(element);
@@ -43,7 +44,6 @@ function chunkSecond(array, size) {
   console.log(chunkedTwo);
   return chunkedTwo;
 }
-
 chunkSecond([1, 2, 3, 4, 5], 2);
 //  --> [[ 1, 2], [3, 4], [5]]
 
