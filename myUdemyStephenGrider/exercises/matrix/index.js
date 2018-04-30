@@ -26,17 +26,6 @@ console.log(arr[3]) => "Wow!"
    7 6 5 */
 
 function drawTables(n) {
-  // let table = [];
-
-  // for (var j = 0; j < n; j++) {
-  //     table[j] = [];
-  // };
-
-  // for (let i = 0; i < n; i++) {
-  //     for (let j = 0; j < n; j++) {
-  //         table[i][j] = 0;
-  //     }
-  // };
 
   const table = [];
 
