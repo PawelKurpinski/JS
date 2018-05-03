@@ -40,6 +40,7 @@ function drawTables(n) {
   let counter = 1;
 
   while (startX <= endX && startY <= endY) {
+
     for (let i = startX; i <= endX; i++) {
       table[startY][i] = counter;
       counter++;
