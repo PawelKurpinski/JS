@@ -12,3 +12,5 @@ class Header extends Component {
 }
 
 export default Header;
+
+/* this is a statefull component */
