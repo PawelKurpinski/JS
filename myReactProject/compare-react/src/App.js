@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Faq from './components/Faq/Faq';
-import './App.css';
+// import Faq from './components/Faq/Faq';
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
       <Footer />
        
 
-       <Faq />
+       {/* <Faq /> */}
       </div>
     );
   }
