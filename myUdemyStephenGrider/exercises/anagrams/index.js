@@ -41,7 +41,7 @@ function buildCharMap(str) { /* this is a helper function */
 anagrams('rail safety', 'fairy tales');
 
 
-// second solution
+// second solution---------------------------------------------------------------------------------------------------------
 
 function anagramsTwo(stringA, stringB) {
   sortLetters(stringA) === sortLetters(stringB);

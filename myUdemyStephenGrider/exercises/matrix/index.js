@@ -120,6 +120,7 @@ drawTables(3);
 
 // module.exports = matrix;
 
+
 var x = 0; /* these are the start values */
 var y = 0;
 
@@ -132,7 +133,7 @@ function spiralMatrix(par) {
   /* this is the premiss at the beginning - we start with the right movement */
 
   for (var k = 1; k <= par * par; k++) {
-    matrixSpiral[x][y] = k; /* here we start with are the start values */
+    matrixSpiral[x][y] = k; /* here we start with the 0 and 0 coordinates with a value equal to 1 */
     if (
       movementDirection == "right" && (y + 1 >= matrixSpiral.length || matrixSpiral[x][y + 1] != undefined)) {
       movementDirection = "down";
