@@ -26,13 +26,13 @@
       let message =
         `Luke first uses a ${luke}-colored lightsaber.<br>But his father, Vader, wields a ${vader}-colored lightsaber.</br>`;
 
-      document.write(message);
+      console.log(message);
     }
     print();
 
     let arrA = [1, 2];
     let arrC = [12, 13, ...arrA]; /* this is spread operator */
-    document.write(arrC);
+    console.log(arrC);
 
     // ---------------------------------------------------------------------------------------------------------
 
@@ -50,12 +50,14 @@
 
     // ---------------------------------------------------------------------------------------------------------
 
-    /* this is nice! In this htree lines we use spread twice!! */
+    /* this is nice! In this three lines we use spread twice!! */
     function butter(...n) {
       let a = [1, 2, 3, ...n];
       return a;
     }
-    butter(4, 5, 6);
+    console.log(butter(4, 5, 6));
+
+    /* we get [1, 2, 3, 4, 5, 6] */
 
     // ---------------------------------------------------------------------------------------------------------
 
@@ -89,15 +91,57 @@
 
     // ---------------------------------------------------------------------------------------------------------
 
-    let wizard = {
+    let wizardG = {
       age: 136,
       name: "Gandalf"
     };
-    let {
-      wA,
-      wN
-    } = wizard;
+    let { wA, wN } = wizardG;
     console.log(wizard);
+
+    /* if we already have declared wA and wN we  */
+
+
+    /* The es6 spread operator spreads the contents of an array or object into multiple variables. 
+ Its syntax uses three periods, just like so: 
+ … Destructuring Assignment in es6 allows us to extract data from arrays or objects into separate,
+  distinct variables. 
+Array Destructuring Assignment assigns multiple variables from an array. For instance, 
+  let [a, b] = c, where values ‘a’ and ‘b’ assign in order to the respective elements in ‘c’. 
+Object Destructuring Assignment assigns multiple variables
+  form an object. For instance, let { a, b } = c, where values ‘a’ and ‘b’ assign to the ‘a’ and ‘b’ 
+  properties in ‘c’. */
+
+    function doIt() {
+      console.log('1....2....3');
+    };
+
+    setTimeout(function () {
+      document.write('<br>1....2....3');
+    }, 4000);
+
+    //or
+
+    setTimeout(() => {
+      document.write('1....2....3');
+    }, 1200);
+
+    /* => is anonymus but! we can use a variable! */
+
+    let arrowFunc = () => {
+      console.log('ala ma kota');
+    }
+    arrowFunc();
+
+    // ----------------------------------------------------------------------
+
+    let newArr = [1, 3, 5];
+
+    function addOne(param) {
+      return (param + 1);
+    }
+    let addOneArr = newArr.map(addOne);
+    console.log(addOneArr);
+
   </script>
 
 </body>
