@@ -160,14 +160,35 @@ Object Destructuring Assignment assigns multiple variables
     points = points.map(param => param + 101);
     console.log(points);
 
-    // another function with two => and MAP!!!
+    // MAP!! and another function with two => 
 
     let lengths = [3, 7, 5];
     let multiple = 8;
 
+
     const scale = (multiple) => {
       return (lengths.map(param => param * multiple));
     };
+
+    // FILTER!!!   
+
+    let numbers = [12, 45, 30, 23, 21, 18, 16];
+
+    let filtered = numbers.filter(param => param < 20);
+
+    console.log(filtered);   /* --> [12, 18, 16] */
+
+
+    // Arrow functions work like normal method expressions in JavaScript, but with a shorter syntax.
+    // They also have the added benefit of being anonymous.In addition, unlike normal JavaScript function, 
+    // they do not bind the this object to their function scope.
+    // The map helper method in es6 allows us to create arrays by calling a function on each element of an initial array.
+    // The filter helper method in es6 creates new arrays with all the same elements of an initial array depending 
+    // on a test that we give it.
+
+    export const students = ["John", "Elise", "Margaret"];
+
+    export const studentsTotal = 100000;
 
   </script>
 
