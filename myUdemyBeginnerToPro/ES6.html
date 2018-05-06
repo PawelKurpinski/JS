@@ -186,9 +186,27 @@ Object Destructuring Assignment assigns multiple variables
     // The filter helper method in es6 creates new arrays with all the same elements of an initial array depending 
     // on a test that we give it.
 
-    export const students = ["John", "Elise", "Margaret"];
+    const students = ["John", "Elise", "Margaret"];
 
-    export const studentsTotal = 100000;
+
+    // or inline export
+
+    const studentsTotal = 100000;
+
+
+    let summ = (a, b) => {
+      return a + b
+    }
+
+    let multiply = (a, b) => {
+      return a * b
+    }
+
+    export { studentsTotal };
+    export { students };
+    export default multiply;
+
+    // default is important here! We do not have to use {} in import!!
 
   </script>
 
