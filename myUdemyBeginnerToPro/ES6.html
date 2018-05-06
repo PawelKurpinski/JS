@@ -142,6 +142,33 @@ Object Destructuring Assignment assigns multiple variables
     let addOneArr = newArr.map(addOne);
     console.log(addOneArr);
 
+    // or---------------------------------------
+
+
+    let newArr2 = [1, 3, 5];
+
+    let addOne2 = (param) => param + 101;
+
+    let addOneArr2 = newArr.map(addOne2);
+    console.log(addOneArr2);
+
+
+    // or! WOW!--------------------------------
+
+
+    let points = [1, 3, 5];
+    points = points.map(param => param + 101);
+    console.log(points);
+
+    // another function with two => and MAP!!!
+
+    let lengths = [3, 7, 5];
+    let multiple = 8;
+
+    const scale = (multiple) => {
+      return (lengths.map(param => param * multiple));
+    };
+
   </script>
 
 </body>
