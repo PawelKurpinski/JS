@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Udemy file 2</title>
+</head>
+
+<body>
+
+  <h1>This my ES6 training</h1>
+
+  <script>
+    let a = "Janek";
+    let b = "Kasia";
+    let c = `Hello!! ${a} and ${b}!!!<br>`;
+    document.write(c);
+
+
+    function print() {
+      let luke = 'blue';
+      let vader = 'red';
+
+      let message =
+        `Luke first uses a ${luke}-colored lightsaber.<br>But his father, Vader, wields a ${vader}-colored lightsaber.</br>`;
+
+      console.log(message);
+    }
+    print();
+
+    let arrA = [1, 2];
+    let arrC = [12, 13, ...arrA]; /* this is spread operator */
+    console.log(arrC);
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    let aar1 = [1, 2, 3];
+    /* instead of console.log(arr1[0], arr1[1], arr1[2]) */
+    console.log(...aar1);
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    function doItAutomatically(...z) {
+      console.log(z)
+    }
+    doItAutomatically(1, 3, 5, 8, 12);
+    /* z becomes an array of arguments! */
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    /* this is nice! In this three lines we use spread twice!! */
+    function butter(...n) {
+      let a = [1, 2, 3, ...n];
+      return a;
+    }
+    console.log(butter(4, 5, 6));
+
+    /* we get [1, 2, 3, 4, 5, 6] */
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    let arr = [100, 200];
+    let ar1 = a[0];
+    let ar2 = a[1];
+
+    console.log(ar1, ar2);
+
+    /* OR something like this! */
+
+    let [d, e] = a;
+
+    console.log(d, e);
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    let felowship = ["Frodo", "Gadalf", "Aragorn"];
+    let [hobbit, wizard, ranger] = felowship;
+    console.log(hobbit, wizard, ranger);
+
+    /* OR */
+
+    let arr2 = [100, 200, 300, 400, 500];
+    // ---------------------------------------------------------------------------------------------------------
+
+    let [h, ...i] = arr2;
+
+    console.log(h, i);
+    console.log(`my new name is ${i}`)
+
+    // ---------------------------------------------------------------------------------------------------------
+
+    let wizardG = {
+      age: 136,
+      name: "Gandalf"
+    };
+    let { wA, wN } = wizardG;
+    console.log(wizard);
+
+    /* if we already have declared wA and wN we  */
+
+
+    /* The es6 spread operator spreads the contents of an array or object into multiple variables. 
+ Its syntax uses three periods, just like so: 
+ … Destructuring Assignment in es6 allows us to extract data from arrays or objects into separate,
+  distinct variables. 
+Array Destructuring Assignment assigns multiple variables from an array. For instance, 
+  let [a, b] = c, where values ‘a’ and ‘b’ assign in order to the respective elements in ‘c’. 
+Object Destructuring Assignment assigns multiple variables
+  form an object. For instance, let { a, b } = c, where values ‘a’ and ‘b’ assign to the ‘a’ and ‘b’ 
+  properties in ‘c’. */
+
+    function doIt() {
+      console.log('1....2....3');
+    };
+
+    setTimeout(function () {
+      document.write('<br>1....2....3');
+    }, 4000);
+
+    //or
+
+    setTimeout(() => {
+      document.write('1....2....3');
+    }, 1200);
+
+    /* => is anonymus but! we can use a variable! */
+
+    let arrowFunc = () => {
+      console.log('ala ma kota');
+    }
+    arrowFunc();
+
+    // ----------------------------------------------------------------------
+
+    let newArr = [1, 3, 5];
+
+    function addOne(param) {
+      return (param + 1);
+    }
+    let addOneArr = newArr.map(addOne);
+    console.log(addOneArr);
+
+    // or---------------------------------------
+
+
+    let newArr2 = [1, 3, 5];
+
+    let addOne2 = (param) => param + 101;
+
+    let addOneArr2 = newArr.map(addOne2);
+    console.log(addOneArr2);
+
+
+    // or! WOW!--------------------------------
+
+
+    let points = [1, 3, 5];
+    points = points.map(param => param + 101);
+    console.log(points);
+
+    // MAP!! and another function with two => 
+
+    let lengths = [3, 7, 5];
+    let multiple = 8;
+
+
+    const scale = (multiple) => {
+      return (lengths.map(param => param * multiple));
+    };
+
+    // FILTER!!!   
+
+    let numbers = [12, 45, 30, 23, 21, 18, 16];
+
+    let filtered = numbers.filter(param => param < 20);
+
+    console.log(filtered);   /* --> [12, 18, 16] */
+
+
+    // Arrow functions work like normal method expressions in JavaScript, but with a shorter syntax.
+    // They also have the added benefit of being anonymous.In addition, unlike normal JavaScript function, 
+    // they do not bind the this object to their function scope.
+    // The map helper method in es6 allows us to create arrays by calling a function on each element of an initial array.
+    // The filter helper method in es6 creates new arrays with all the same elements of an initial array depending 
+    // on a test that we give it.
+
+
+
+  </script>
+
+  <script src="./defaultTwo.js"></script>
+  <script src="./default.js"></script>
+</body>
+
+</html>
