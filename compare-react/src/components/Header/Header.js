@@ -1,26 +1,45 @@
 import React, { Component } from 'react';
+import './Header.css'
+import{ Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
     return (
-      
-      <div className="dropdown is-right is-active">
-      <div className="dropdown-trigger">
-        <button className="button" aria-haspopup="true" aria-controls="dropdown-menu6">
-          <span>Right aligned</span>
-          <span className="icon is-small">
-            <i className="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </div>
-      <div className="dropdown-menu" id="dropdown-menu6" role="menu">
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <p>Add the <code>is-right</code> modifier for a <strong>right-aligned</strong> dropdown.</p>
+
+      <div className="nav has-shadow">
+      <div className="container">
+        <div className="nav-left">
+          <a className="nav-item">MyCompany</a>
+        </div>
+
+        <span className='nav-toggle'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+        <div className='nav-right nav-menu'>
+
+          <Link to="/" className="nav-item r-item">Home</Link>
+          <Link to="/faq" className="nav-item r-item">Features</Link>
+          <Link to="/faq" className="nav-item r-item">About</Link>
+          <Link to="/faq" className="nav-item r-item">FAQ</Link>
+
+          <div className="nav-item">
+            <p className="control">
+              <a className="button is-primary is-outlined">
+                <span className="icon">
+                  <i className="fa fa-download"></i>
+                </span>
+                <span>Join Now</span>
+              </a>
+            </p>
           </div>
+
         </div>
       </div>
     </div>
+
   
     );
   }
