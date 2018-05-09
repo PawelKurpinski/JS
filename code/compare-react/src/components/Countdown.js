@@ -17,5 +17,6 @@ class Countdown extends Component {
   </section>
 	);
 	}
-};
-export default Countdown
+}
+
+export default Countdown;

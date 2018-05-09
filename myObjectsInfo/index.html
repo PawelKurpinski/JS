@@ -56,7 +56,7 @@ myNewObject.showInfoThird = function() {
     alert('we have made it!');
 }
 
-// poniżej znajduje się wywołanie funkcji - UWAGA! samo "showInfo" nic by nie dało
+// poniżej znajduje się wywołanie funkcji - UWAGA! samo "showInfo()" nic by nie dało
 // ponieważ odwoływałoby się do obiektu nadrzędnego Window a nie mojego myNewObject.
 
 myNewObject.showInfo();  
@@ -66,7 +66,7 @@ myNewObject.showInfoThird();
 console.log('last stage: '+ myNewObject.info); 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------
-// TWORZENIE OBIEKTU za pomocną WYRAŻENIA FUNKCYJNEGO inaczej poprzez użycie FUNKCJI KONSTRUKTORA OBIEKTU
+// TWORZENIE OBIEKTU za pomocną WYRAŻENIA FUNKCYJNEGO inaczej mowiac poprzez użycie FUNKCJI KONSTRUKTORA OBIEKTU
 
 function myNewObjectType(){
     this.info = 'Też jestem obiektem';
@@ -78,8 +78,7 @@ function myNewObjectType(){
         go do nadpisania wartości właściwośći info */
     }
 };
-
-// -----------------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 // TWORZENIE INSTANCJI OBIEKTÓW a więc obiektów posiadających metody i właściwości zdefioniowane w głównej funkcji konstruktora 
 
 var myNewObject1 = new myNewObjectType();  /* widać więc zmienną, nazwę nowego obiektu oraz słowo kluczowe new i niejako wywołanie funkcji konstruktora */
@@ -162,6 +161,33 @@ String.prototype.backwards = function(){
     }
     return out;
 }
+
+
+
+function Product(parA, parB, parC) { /* funkcja konstruktora */
+    this.parA = parA;
+    this.parB = parB;
+    this.parC = parC;
+}
+var Monitor = new Product(1, "Dell U123", "325"); /* tworzę instancję Product'a
+jednocześnie przekacując od razu argumenty a więc w rzeczywistości do zmiennej 
+przypisuję wywołanie funkcji konstruktora wraz ze słowem kluczowym new oraz argumentami */
+
+//Teraz ES6!
+
+//Klasa stanowi definicję obirktu, opisuje jego możliwy stan oraz zachowanie.
+
+class Product{ /* funkcja konstruktora */
+    constructor(parA, parB, parC) { 
+    this.parA = parA;
+    this.parB = parB;
+    this.parC = parC;
+    }
+}
+let Monitor = new Product(1, "Dell U123", "325"); 
+/* w ES6 w celu ustawienia właściwości obiektu używamy metody constructor'a(),
+ ktora zostaje wywołana w chwili tworzenia nowego obiketu będącego instancją 
+ naszej klasy */
 
 
     </script>
