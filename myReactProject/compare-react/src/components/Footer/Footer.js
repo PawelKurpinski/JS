@@ -6,7 +6,7 @@ const Footer = () => {
        <h1>Footer it's me ;)</h1>
       </div>
     );
-  };
+  }
 
 export default Footer;
 
