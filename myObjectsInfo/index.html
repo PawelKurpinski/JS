@@ -39,13 +39,13 @@ console.log('fist stage: '+ myNewObject.info);
 
 
 function myFunc(){       /* dodaję metodę  */
-    alert("ale zabawa");
+     console.log("ale zabawa");
 };
 myNewObject.showInfo = myFunc;
 
 // dodaję drugą metodę
 function myFuncSecond(){
-    alert(this.info);
+     console.log(this.info);
 };
 myNewObject.showInfoSecond = myFuncSecond;
 
@@ -53,8 +53,8 @@ myNewObject.showInfoSecond = myFuncSecond;
 // UWAGA! ładniej można to napisać za pomocą FUNKCJI ANONIMOWEJ! 
 
 myNewObject.showInfoThird = function() {
-    alert('we have made it!');
-}
+console.log('we have made it!');
+};
 
 // poniżej znajduje się wywołanie funkcji - UWAGA! samo "showInfo()" nic by nie dało
 // ponieważ odwoływałoby się do obiektu nadrzędnego Window a nie mojego myNewObject.
@@ -71,7 +71,7 @@ console.log('last stage: '+ myNewObject.info);
 function myNewObjectType(){
     this.info = 'Też jestem obiektem';
     this.showInfo = function(){
-        alert(this.info); /* wyświetlam zapisane powyżej info */
+        console.log(this.info); /* wyświetlam zapisane powyżej info */
     }
     this.setInfo = function (newInfo) {
         this.info = newInfo;  /* ta druga metoda pobiera argument newInfo i używa
@@ -111,7 +111,7 @@ car1.setOdometer(220000); /* zmiana przebiegu poprzez funkcję zawartą w obieci
 //                         prototype nadaje nowe metody i właściwości zarówno obiektowi jak i jego instancjom.
 
 Car.prototype.makeSound = function () {
-    alert(this.make + " makes Wrrrumm!");
+    console.log(this.make + " makes Wrrrumm!");
 }
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
@@ -177,20 +177,60 @@ przypisuję wywołanie funkcji konstruktora wraz ze słowem kluczowym new oraz a
 
 //Klasa stanowi definicję obirktu, opisuje jego możliwy stan oraz zachowanie.
 
-class Product{ /* funkcja konstruktora */
+class ProductA{ /* funkcja konstruktora */
     constructor(parA, parB, parC) { 
     this.parA = parA;
     this.parB = parB;
     this.parC = parC;
     }
 }
-let Monitor = new Product(1, "Dell U123", "325"); 
+let MonitorA = new ProductA(1, "Dell U123", "325"); 
 /* w ES6 w celu ustawienia właściwości obiektu używamy metody constructor'a(),
  ktora zostaje wywołana w chwili tworzenia nowego obiketu będącego instancją 
  naszej klasy */
 
+//----------------------------------------------------
+//ES6 SYNTAX
 
-    </script>
+let testEs6 = (a) => a * 2;
+console.log(testEs6(4));
+
+const arr = [1, 4, 5, 19];
+
+const testES = arr.map(numbers => numbers*2);
+console.log(testES);
+
+//----------------------------------------------------
+
+function Person() { //to funkcja konstuktora
+    this.age = 10;
+    console.log(this);
+
+    // setInterval(function growUp() {
+    //     this.age++;
+    //     console.log(this);
+    // }, 10000);    This syntax will not work!
+
+    setInterval(()=>{
+        // this.age++;
+        // console.log(this);   This will do the job! because od arrow function!
+    }, 100000);
+}
+let p = new Person();
+
+
+//-------------------------------------------------------
+
+const array = [[1,2],[2,3],[5,6]]; /* we want to change to one array */
+
+let result = array.reduce(function(prev, curr){
+    console.log(prev, curr);
+    return prev.concat(curr);
+});
+console.log(result);
+
+
+</script>
 
 </body>
 </html>
