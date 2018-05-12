@@ -11,3 +11,4 @@ const Footer = () => {
 export default Footer;
 
 /* this is a stateless component */
+ 
