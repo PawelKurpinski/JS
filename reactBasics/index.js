@@ -86,6 +86,45 @@ document.addEventListener('DOMContentLoaded', function(){
   );
 });
 
+//------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  const numberA = parseInt(prompt("wpisz A"));
+  const numberB = parseInt(prompt("wpisz B"));
+  const action = prompt("wpisz znak +,-,* lub /");
+
+  function calc(numberA, numberB, action) {
+
+  let result;
+  switch (action) {
+      case "+":
+          result = <h1>{numberA + numberB}</h1>;
+          break;
+      case "-":
+          result = <h2>{numberA - numberB}</h2>;
+          break;
+      case "*":
+          result = <h3>{numberA * numberB}</h3>;
+          break;
+      case "/":
+          result = <h4>{numberA / numberB}</h4>;
+          break;
+      default:
+          result = "błędny typ działania";
+  }
+  return result
+}
+
+  ReactDOM.render(
+      <div>{ calc(numberA, numberB, action) }</div>,
+      document.getElementById('app')
+  );
+});
+
+//-----------------------------------------------------------
+
+
+
 
 
 
