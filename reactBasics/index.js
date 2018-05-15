@@ -123,9 +123,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //-----------------------------------------------------------
 
+import React, { Component } from 'react';
 
+class Countdown extends Component {
+  constructor(){
+    super();
+    this.state = {counter: 0, counter2: 0}
+  }
 
+  render() {
+    return (
+      <div>
+        <button onClick={this.increment.bind(this)}>+</button>
+        <button onDoubleClick={this.incrementDouble.bind(this)}>+</button>
+        <output>{this.state.counter}</output>
+        <button onClick={this.decrement.bind(this)}>--</button>
 
+   
+        <output>{this.state.counter2}</output>
+     
+      </div>
+    );
+  }
+  increment(){
+    this.setState({
+      counter: this.state.counter + 1
+    });
+  }
+  incrementDouble(){
+    this.setState({
+      counter2: this.state.counter2 + 1
+    });
+  }
+  
+  decrement(){
+    this.setState({
+      counter: this.state.counter - 1
+    });
+  };
 
-
-
+  // export default Countdown;

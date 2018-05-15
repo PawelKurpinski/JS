@@ -6,7 +6,7 @@ class Countdown extends Component {
 
     this.getRemainingTime();
 
-    this.state={
+    this.state = {
       interval: this.getRemainingTime()
     }
   }
@@ -17,7 +17,6 @@ class Countdown extends Component {
     /* +1 because we will compare current date with the one in a year 
     or do sth like this ;) 0 i January and on is the first */
     console.log(now, newYear) 
-    
   }
 
 	render() {
