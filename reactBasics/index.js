@@ -80,7 +80,7 @@ const menuItems = [
 
 document.addEventListener('DOMContentLoaded', function(){
 
-  ReactDOM.render(
+  ReactDOM.render(    //this is the place where we are passing or getting access to our object menuItems as props!!!
       <Menu menu={menuItems}/>,
       document.getElementById('app')
   );
