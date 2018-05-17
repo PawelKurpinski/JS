@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Countdown extends Component {
   constructor(props){
     super(props)
 
-    this.getRemainingTime();
+  
 
     this.state = {
       interval: this.getRemainingTime()
     }
   }
 
-  getRemainingTime(){
-    let now = new Date(),
-    newYear = new Date(now.getFullYear() + 1, 0, 1) 
-    /* +1 because we will compare current date with the one in a year 
-    or do sth like this ;) 0 i January and on is the first */
-    console.log(now, newYear) 
-  }
+  getRemainingTime() {   /* moment is a library witch we nedd to install using npm */
+    let now = moment(),
+        newYear =  moment({year: now.year()+ 1}),
+        diff = newYear.diff(now)
+    return moment.duration(diff)
+  }  
+
+    // let now = new Date(),
+    // newYear = new Date(now.getFullYear() + 1, 0, 1) 
+    // /* +1 because we will compare current date with the one in a year 
+    // or do sth like this ;) 0 i January and on is the first */
+    // console.log(now, newYear) 
+
 
 	render() {
     return (
