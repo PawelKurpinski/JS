@@ -18,6 +18,10 @@ class Countdown extends Component {
     }, 1000)
   }
 
+  componentWillUnmount(){
+    clearInterval(this.interval)
+  }
+
   getRemainingTime() {   /* moment is a library witch we nedd to install using npm */
     let now = moment(),
         newYear =  moment({year: now.year()+ 1}),
