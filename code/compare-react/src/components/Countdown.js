@@ -5,11 +5,17 @@ class Countdown extends Component {
   constructor(props){
     super(props)
 
-  
-
     this.state = {
-      interval: this.getRemainingTime()
+    duration: this.getRemainingTime()
     }
+  }
+
+  componentDidMount(){
+    this.interval = setInterval(() => {
+      this.setState({
+      duration: this.getRemainingTime()
+      })
+    }, 1000)
   }
 
   getRemainingTime() {   /* moment is a library witch we nedd to install using npm */
@@ -27,6 +33,8 @@ class Countdown extends Component {
 
 
 	render() {
+    const {duration} = this.state
+
     return (
     <section className="hero is-success is-fullheight has-text-centered">
    	 <div className="hero-body">
@@ -39,25 +47,25 @@ class Countdown extends Component {
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">DAYS</p>
-                <p className="title">3,456</p>
+                <p className="title">{Math.floor(duration.asDays())}</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
-                <p className="heading">HOURS</p>
-                <p className="title">123</p>
+                <p className="heading">HOURS</p>      {/* padStart(2, '0')  this is ES2017 !! this allows me adding zero when there is only one digit hour*/}
+                <p className="title">{duration.hours().toString().padStart(2, '0')}</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">MINUTES</p>
-                <p className="title">456K</p>
+                <p className="title">{duration.minutes().toString().padStart(2, '0')}</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">SECONDS</p>
-                <p className="title">789</p>
+                <p className="title">{duration.seconds().toString().padStart(2, '0')}</p>
               </div>
             </div>
           </nav>
