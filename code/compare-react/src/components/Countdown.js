@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+const hStyle = {
+  fontSize: '45px',
+};
+
 class Countdown extends Component {
   constructor(props){
     super(props)
@@ -43,8 +47,8 @@ class Countdown extends Component {
     <section className="hero is-success is-fullheight has-text-centered">
    	 <div className="hero-body">
       <div className="container">
-        <h1 className="title">
-          New Year is comming up!
+        <h1 className="title" style={hStyle}>
+          New Year is comming up soon ;) <br/>only in:
         </h1>
         <div className='section'>
                   <nav className="level">
