@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="root"></div>
@@ -21,9 +22,9 @@
          render(){
              let {name, pic} = this.props; /* tahnks to this 'destructing "method"', I don't need to write "this.props" every single time below */
              return(
-               <div>  
+               <div className="profile-box">  
                     <h1>Hello, world!</h1>
-                    <h2>My name is { /* this.props. */ name}. My big love i ReactJS</h2>
+                    <h2>My name is { /* this.props. */ name}. My big love i ReactJS ;P and my...</h2>
                     <img src={ /* this.props. */ pic} height={this.state.height} />
                     <br />
                     <button onClick={this.zoomIn.bind(this)}>+</button>
