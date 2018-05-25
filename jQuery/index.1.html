@@ -6,7 +6,7 @@
   <title>Mniej Więcej</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <style>
-    .opis {
+    .description {
       border: 1px solid #ccc;
       margin: 10px;
       padding: 5px;
@@ -17,8 +17,8 @@
       overflow: hidden;
     }
 
-    .pokaz,
-    .ukryj {
+    .show,
+    .hide {
       text-align: right;
       cursor: pointer;
     }
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <div class="opis">
+  <div class="description">
     <div class="text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique dapibus metus eget pharetra. Sed ornare ipsum pretium,
       laoreet massa eu, fermentum dolor. Proin tempor sollicitudin purus, nec condimentum sem tristique at. Praesent pellentesque
@@ -38,19 +38,19 @@
 
   <script>
     $(document).ready(function () {
-      $(".opis").each(function () {
-        $(this).append("<div class='pokaz'>Pokaż</div>");
+      $(".description").each(function () {
+        $(this).append("<div class='show'>Pokaż</div>");
         var text = $(this).find('.text');
         var wys = text.height();
-        text.css('height', '80px');
-        $(this).on('click', '.pokaz', function () {
-          text.animate({ height: wys }, 1000);
-          $(this).attr('class', 'ukryj');
+        text.css('height', '40px');
+        $(this).on('click', '.show', function () {
+          text.animate({ height: wys }, 100);
+          $(this).attr('class', 'hide');
           $(this).text("Ukryj");
         });
-        $(this).on('click', '.ukryj', function () {
-          text.animate({ height: '80px' }, 1000);
-          $(this).attr('class', 'pokaz');
+        $(this).on('click', '.hide', function () {
+          text.animate({ height: '40px' }, 1000);
+          $(this).attr('class', 'show');
           $(this).text("Pokaz");
         });
       });
