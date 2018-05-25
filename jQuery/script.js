@@ -4,13 +4,12 @@
   alert("cosik się skiepściło!")
 }; */
 
+$(document).ready(larg);
 
- $(document).ready(larg);
+$(window).resize(larg);
 
- $(window).resize(larg);
-
- function larg(){
+function larg() {
   let larghezza = $(document).width();
   $("p.width").text("The width for the " + larghezza + " is px.");
- }
- document.write('viewport width'+ viewport().width );
+}
+document.write("viewport width" + viewport().width);
