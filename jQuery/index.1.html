@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Mniej Więcej</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <style>
+    .opis {
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 5px;
+      width: 300px;
+    }
+
+    .text {
+      overflow: hidden;
+    }
+
+    .pokaz,
+    .ukryj {
+      text-align: right;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="opis">
+    <div class="text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique dapibus metus eget pharetra. Sed ornare ipsum pretium,
+      laoreet massa eu, fermentum dolor. Proin tempor sollicitudin purus, nec condimentum sem tristique at. Praesent pellentesque
+      et diam sit amet condimentum. Sed aliquam massa sit amet ornare accumsan. Nam a vulputate lorem. Sed ut pulvinar mauris.
+      Consectetur adipiscing elit. Donec tristique dapibus metus eget pharetra.
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".opis").each(function () {
+        $(this).append("<div class='pokaz'>Pokaż</div>");
+        var text = $(this).find('.text');
+        var wys = text.height();
+        text.css('height', '80px');
+        $(this).on('click', '.pokaz', function () {
+          text.animate({ height: wys }, 1000);
+          $(this).attr('class', 'ukryj');
+          $(this).text("Ukryj");
+        });
+        $(this).on('click', '.ukryj', function () {
+          text.animate({ height: '80px' }, 1000);
+          $(this).attr('class', 'pokaz');
+          $(this).text("Pokaz");
+        });
+      });
+    });
+
+  </script>
+
+
+
+</body>
+
+</html>
