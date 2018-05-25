@@ -1,14 +1,16 @@
-if(jQuery){
+/* if(jQuery){
   alert("gitarka!")
 } else {
   alert("cosik się skiepściło!")
-};
-$('button').click(function(){
-  alert("Another click");
-});
-$('h1').click(function() {
-    alert("uważaj gdzie stajesz!");
-});
-$('div').css('background', 'purple');
-$('.highlight').css('width', '200px');
-$('div:first').css('color','pink');
+}; */
+
+
+ $(document).ready(larg);
+
+ $(window).resize(larg);
+
+ function larg(){
+  let larghezza = $(document).width();
+  $("p.width").text("The width for the " + larghezza + " is px.");
+ }
+ document.write('viewport width'+ viewport().width );
