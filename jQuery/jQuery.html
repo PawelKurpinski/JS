@@ -11,10 +11,40 @@
 
 <body>
 
-    <script>
+    <ul>
+        <li>domek</li>
+        <li>Ala</li>
+        <li>Kot</li>
+        <li id='my'>Ela</li>
+        <li>domek</li>
+        <li>Ala</li>
+        <li>Kot</li>
+        <li>Ela</li>
+        <li>domek</li>
+        <li>Ala</li>
+        <li class="only">Kot</li>
+        <li>Ela</li>
+    </ul>
 
-  
-       
+
+    <script>
+        $('#my').css('color','green');
+        
+        let styles = {
+            backgroundColor: 'pink',
+            fontWeight: "bold"
+        };
+        $('.only').css(styles);
+
+        $('ul :first-child').css('border','2px solid black');
+        
+        $('ul :last-child').css({
+            fontSize: '40px',
+            color: 'blue'
+        });   /* we are passing an object here so instead of font-size we write in JS with the camel case */
+
+
+        
     </script>
 
 </body>
