@@ -13,11 +13,13 @@
 <body>
 
     <div>I'm not empty! ;)</div>
-    
+    <div id="main"></div>
     <div>Div 1</div>
     <div class='highlight'>Div 2</div>
     <div id='third'>Div 3</div>
-    <div class='highlight'>Div 4</div>
+    <div class='highlight'>Div 4</div> <br>
+
+    <input type="text" placeholder="Your name">
 
     <ul>
         <li>domek</li>
@@ -60,6 +62,11 @@
         $('div.highlight').css('width','200px');
         $('#third').css('border','orange solid 2px');
         $('div:first-of-type').css('color','red');
+        $('div#main').text('text from jQuery').css('color','green');
+
+        $('img').attr('alt', 'opis zdjęcia'); 
+
+        $('input').attr('type', 'color');
         
     </script>
 
