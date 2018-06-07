@@ -12,6 +12,9 @@
 
 <body>
 
+    <h1>jQuery Events</h1>
+    <h1>jQuery Events</h1>
+    <h1>jQuery Events</h1>
     <div>I'm not empty! ;)</div>
     <div id="main"></div>
     <div>Div 1</div>
@@ -20,6 +23,9 @@
     <div class='highlight'>Div 4</div> <br>
 
     <input type="text" placeholder="Your name">
+    <input type="text" class="myClass" placeholder="My name">
+
+    <button type="submit">This is my button</button>
 
     <ul>
         <li>domek</li>
@@ -66,7 +72,7 @@
 
         $('img').attr('alt', 'opis zdjęcia'); 
 
-        $('input').attr('type', 'color');
+        // $('input').attr('type', 'color');
 
         $('input').click(()=>{
             alert("who's this?!");            
@@ -76,9 +82,30 @@
             alert("hello it's me!");            
         });
 
-        $('li:last-of-the-type').click(()=>{
-            css("background", "pink")
+        $('li:last-of-type').click(function(){
+            $(this).css("background", "white")
+        });
+
+        $('input').keypress((event) =>{
+            if (event.which === 13) {
+                alert("it was enter! wrrr")
+            }
         })
+
+        /* $('h1').on('click', ()=>{
+            $('h1').css('color', 'purple')
+        }) */
+        $('h1').on('click', function(){
+            $(this).css('color', 'purple')
+        });
+
+        $("input.myClass").on("keypress", function(){
+            console.log('keypressed!!');
+        });
+
+        $('button').on('mouseenter', function(){
+            $(this).css('font-weight', 'bold')
+        });
 
     </script>
 
