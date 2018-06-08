@@ -17,3 +17,10 @@
 $('li').on("click", function () {
         $(this).toggleClass('completed');
 });
+
+$('span').on("click", function (event){
+     $(this).parent().fadeOut(1500, ()=> {
+        $(this).parent().remove();
+     });
+    event.stopPropagation();
+});
