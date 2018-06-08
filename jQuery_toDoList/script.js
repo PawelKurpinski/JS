@@ -22,7 +22,7 @@ $('ul').on("click", "li", function () {
 /* $('span').on("click", function (event){ */
 
 $('ul').on("click", 'span', function (event){
-     $(this).parent().fadeOut(1500, function() {
+     $(this).parent().fadeOut(1000, function() {
         $(this).remove();
      });
     event.stopPropagation();
