@@ -11,8 +11,8 @@ export default StyleSheet.create({
     // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
   },
   '#container': {
-    'width': [{ 'unit': 'px', 'value': 360 }],
-    'margin': [{ 'unit': 'px', 'value': 100 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 100 }, { 'unit': 'string', 'value': 'auto' }],
+    'width': [{ 'unit': 'px', 'value': 600 }],
+    'margin': [{ 'unit': 'px', 'value': 300 }, { 'unit': 'string', 'value': 'auto' }, { 'unit': 'px', 'value': 300 }, { 'unit': 'string', 'value': 'auto' }],
     'backgroundColor': '#f7f7f7',
     'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 3 }, { 'unit': 'string', 'value': 'rgba(0,0,0, 0.1)' }]
   },
@@ -44,7 +44,7 @@ export default StyleSheet.create({
     'background': '#f7f7f7'
   },
   'input': {
-    'fontSize': [{ 'unit': 'px', 'value': 18 }],
+    'fontSize': [{ 'unit': 'px', 'value': 24 }],
     'color': '#f7f7f7',
     'width': [{ 'unit': '%H', 'value': 1 }],
     'padding': [{ 'unit': 'px', 'value': 13 }, { 'unit': 'px', 'value': 13 }, { 'unit': 'px', 'value': 13 }, { 'unit': 'px', 'value': 20 }],
@@ -59,7 +59,7 @@ export default StyleSheet.create({
     'outline': 'none'
   },
   'fa-plus': {
-    'fontSize': [{ 'unit': 'px', 'value': 18 }],
+    'fontSize': [{ 'unit': 'px', 'value': 24 }],
     'float': 'right'
   },
   'spantrash': {
