@@ -32,6 +32,6 @@ $("input[type='text']").keypress(function(event){
     if(event.which === 13){
         let toDoText = ($(this).val());
         $(this).val(''); /* this is an empty string - we need it to clear the input after writing down new ToDos */
-        $('ul').append(`<li><span>X</span> ${toDoText}</li>`);
+        $('ul').append(`<li><span><i class="fas fa-trash-alt"></i></span> ${toDoText}</li>`);
     }
 });

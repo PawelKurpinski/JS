@@ -1,5 +1,8 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background: #24C6DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #container{
@@ -48,10 +51,33 @@ input{
     padding: 13px 13px 13px 20px;
     box-sizing: border-box;
     color: #2980b9;
+    border: 3px rgba(0, 0, 0, 0); 
+    /* his will cover the problem with strange gap between the input and the list of LIs; Actually this border is invisible but it helps a lo */
 }
 
 input:focus{
     background: #fff;
     border: 2px solid #2980b9;
     outline: none;
+}
+
+.fa-plus{
+    font-size: 18px;
+    float: right;
+} 
+
+span.trash{
+    background-color: red;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0; /* we put 0 here because it will change on hover */
+    display: inline-block;
+    opacity: 0;
+}
+
+li:hover span{
+    width: 40px;
+    opacity: 1.0;
 }
