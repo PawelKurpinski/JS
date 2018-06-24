@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Challenge</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Challenge</h1>
+    <h3>Dzień 1</h3>
+    <ol>
+        <li>Zmienna w JS - jest kontenerem, niejako "szufladą" pozwalającą na przechowywanie/zapisywanie danych różnego typu</li>
+        <li>Celem zmiennych jest - zapisywanie/przechowywanie danych</li>
+        <li>3 główne elementy zmiennych:
+            <ul>
+                <li>nazwa</li>
+                <li>miejsce w pamięci</li>
+                <li>wartość</li>
+            </ul>
+            <li>CamelCaseVariable</li>
+            <li>Deklaracja a inicjalizacja - deklaracja nie obejmuje przypisania konkretnej wartości do zmiennej a więc samo
+                "var home;" jest deklaracją. Zaś inicjalizacja rozszerza powyższe działanie o oprator przypisania i wartość</li>
+            <li>3 słowa kluczowe:</li>
+            <ul>
+                <li>var</li>
+                <li>let</li>
+                <li>const (jej nie da się nadpisać!)</li>
+            </ul>
+            <li>Przypisanie zmiennej odbywa się za pomocą znaku równości</li>
+            <li>Nadpisanie var name = name = "Maciek"</li>
+    </ol>
+
+    <h3>Dzień 2</h3>
+    <ol>
+        <li>Co to jest instrukcja - to polecenie dla komputera zapisane zrozumiałym dla niego językiem; inaczej mówiąc jest to
+            podstawowa jednostka kodu zakończona średnikiem. Instrukcje zazwyczaj wykonywane są od góry do dołu i od lewej
+            do prawej</li>
+        <li>Dwa sposoby oznaczania komenetarzy:</li>
+        <ul>
+            <li>/* */</li>
+            <li>
+                <--! -->
+            </li>
+            <li>//...</li>
+        </ul>
+        <li>Typ zmiennej - opisuje tym danych w niej przechowywanych</li>
+        <li>Dwa typy zmiennych w JS:</li>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+        </ul>
+        <li>Obiekt główny w JS wbudowany w przeglądarkę to WINDOW</li>
+        <li>var imie = "Paweł";</li>
+    </ol>
+
+    <h3>Dzień 3</h3>
+    <ol>
+        <li>Co to są "typy proste" - to: </li>
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>undfined - zwraca false</li>
+            <li>null - zwraca false</li>
+            <li>symbol</li>
+        </ul>
+        <li>Typy referencyjne - obiekt czyli Object</li>
+        <li>Oraz jego Podtypy:</li>
+        <ul>
+            <li>Function</li>
+            <li>Array</li>
+        </ul>
+        <li>W JS - zmienna nie ma typu!</li>
+        <li>W JS - wartość zmiennej jest określonego typu!</li>
+        <li>Co to jest literał - inicjalizuje zmienną; jeżeli jest stringiem to jako string inicjalizuje zmienną</li>
+        <li>Do czego służy operator typeof - służy do określenia typu danych zawartych w danej zmiennej</li>
+        <li>Co się stanie gdy wartość typu prostego jednej zmiennej zostanie przypisanie innej zmiennej? Obie mają tę samą wartość</li>
+        <li>typeOf - to operator jednoargumentowy</li>
+    </ol>
+    <h3>Dzień 4</h3>
+    <ol>
+        <li>Jak będzie wyglądał zapis 50% = 50/100 </li>
+        <li>Pojęcie bitów - bit jako wartość binarna przyjmuje wartość 0 lub 1; 8 bitów = 1 bajt; 1kB = 1024 bajty
+            <br> prędkość neta! 100 Mb/s muszę podzielić przez 8 = 12,5 MB/s (megabity/megabajty)
+            <br> Co do pojemnośći dysków!! po przeliczeniu dokładnym dysk 2 TB to ok 1,819 TB!!</li>
+        <li>Sposób na znalezienie liczby max i min:</li>
+        <ul>
+            <li>Function</li>
+            <li>Array</li>
+        </ul>
+        <li>Do czego służą operatory</li>
+        <li>NaN = not a number</li>
+        <li>Zaokrąglanie liczby - Math.floor lub Math.toFixed()</li>
+        <li>Infinity - to nieskończoność</li>
+
+    </ol>
+    <h3>Dzień 5</h3>
+    <ol>
+        <li>Jakie wartości przyjmuje typ boolean</li>
+        <ul>
+            <li>true</li>
+            <li>false</li>a
+        </ul>
+        <li>Podaj wyniki działań: true / false</li>
+        <ul>
+            <li>5 > 3 true</li>
+            <li>5 == 3 false</li>
+            <li>5 === "3" false</li>
+            <li>"5"! == 5 true</li>
+            <li>"5" != 5 false</li>
+            <li>5 >= 3 true</li>
+            <li>undefind === undefined true</li>
+            <li>
+                <strong>NaN === NaN false (!!wyjątek!!)</strong>
+            </li>
+            <li>infinity === infinity</li>
+            <li>" " czyli pusty string; 0 ; null; undefined; NaN (przypisane do zmiennej) zwracają false</li>
+            <li>obeikty z założenia zwracają true - patrz poniżej</li>
+        </ul>
+        <li>Za pomocą jakiej funkcji srawdzisz dowolną wartość? np. za pomocą Boolean() np. Boolean([]) lub !![ ]</li>
+        <li>Co oznacza zapis x?y:v? jeżeli true to y a jeżeli false to v</li>
+        <li>Co oznaczają operatory: można je porównać do działań matematyczno logicznych; są logiczne, matematyczne i przypisania</li>
+        <li>W jakiej kolejności będzie wykonane to zadanie: false||!false&&true</li>
+        <li>Kolejność</li>
+        <ol>
+            <li>() jeżeli jest</li>
+            <li>!</li>
+            <li>&&</li>
+            <li>||</li>
+        </ol>
+        <li>dlaczego null + 5 = 5 ale undefined + 5 = NaN;</li>
+        <li>null + 3 === || !(5-5)&&"1"*10>=10</li>
+        <ol>
+            <li>najpierw działanie w nawiasie czyli zero, które ma wartość false</li>
+            <li>negacja logiczna czyli "!" zmienia na false i następnie na true</li>
+            <li>mnożenie "1"*10 następuje konwersja na number = 10</li>
+            <li>teraz dodawanie - podczas konwersji null zamienianiane jest na 0 -> zostaje więc 3</li>
+            <li>następnie >= a więc true</li>
+            <li>na koniec === porównanie też true bo 3 ===3 </li>
+            <li>&& czyli logiczne i też true </li>
+            <li>|| też daje true</li>
+        </ol>
+    </ol>
+
+    </ol>
+    <h3>Dzień 6</h3>
+    <ol>
+        <li>Czym jest operator w JS?</li>
+        <li>Co zostanie zwrócone?</li>
+        <ul>
+            <li>5 || 4 5 bo lub i oba na true</li>
+            <li>true || false - true </li>
+            <li>false || "" - zwraca "" bo na tym się zatrzymał</li>
+            <li>null || undefined - zwraca undefined</li>
+            <li>false || 0 || "" || null - zwraca null </li>
+            <li>null && "" - null bo wystarczy jeden null by cały warunek był nieprawdziwy</li>
+            <li>0 && NaN - zwraca 0 bo przy operatorze lub nie trzeba sprawdzać dalej jak na początku jest null</li>
+        </ul>
+        <li>Podaj wyniki działań: true / false</li>
+        <li>Kiedy użuwamy wartości undefined? np. przy deklaracji zmiennej bez jej inicjalizacji undefined się pojawia ale jako
+            takiego zapisu z undefined nie używa się. Ale używa się null. Undefined jest generowane przez silnik przeglądarki.</li>
+        <li>
+            <strong>UWAGA! typeOf null ZWRACA object co jest BŁĘDEM JS!!</li>
+        <li>Uwaga!
+            <br>null + liczba = liczba
+            <br>ale
+            <br>undefined + liczba = NaN </strong>
+        </li>
+    </ol>
+    <h3>Dzień 7 var</h3>
+    <ol>
+        <li>Czym jest zmienna w JS? "pojemnik przechowujący dane" itp.</li>
+        <li>Trzy słowa kluczowe przy tworzeniu zmiennych</li>
+        <ul>
+            <li>var</li>
+            <li>const</li>
+            <li>let</li>
+        </ul>
+        <li>deklaracja zmiennej w odróżnieniu od inicjalizacji pozostawia zmienną bez przypisania jej wartośći a więc domyślnie
+            silnik js nadaje jej wartość undefined. i tu Uwaga! jeżeli najpierw deklarujemy zmienną a później nadajemy jej
+            wartość lub ją nadpisujemy - nie używamy już po raz drugi słowa kluczowego var!</li>
+        <li>literał </li>
+        <li>słowa zastrzeżone przy tworzeniu (nazwy) zmiennej: var (np. var var ;P), function, true, class itp.</li>
+    </ol>
+    <h3>Dzień 8 zasięg zmiennych</h3>
+    <ol>
+        <li>Jakie są dwa zasięgi zmiennych: lokalny i globalny</li>
+        <li>Jaka jest różnica między zasięgiem globalnym i lokalnym</li>
+        <ul>
+            <li>zasięg lokalny - zmienna stworzona za pomocą var wewnątrz funkcji jest dostępna tylko dla niej</li>
+            <li>zasięg globalny - zmienna globalna utworzona poza funkcją jest dostępna w każdym miejscu kodu - również w funkcji</li>
+        </ul>
+        <li>Zasięg lokalny / globalny w:</li>
+        <ul>
+            <li>var - zmienna utworzona w funkcji jest lokalna
+                <strong> var cechuje zasięg funkcyjny</strong>, ale już np. w instrukcji warunkowej czyli w innych blokach niż funkcja
+                var jest zawsze globalny</li>
+            <li>let - tego rodzaju zmienna nie jest dodawana - jak var - do obiektu window;
+                <strong>let cechuje zasięg blokowy</strong>;
+                <br>let np. w instrukcji warunkowej w odróżnieniu od var nie staje się zmienną globalną(np. if "chroni" zakres
+                tak jak funkcja)
+                <br> UWAGA! raz
+                <strong>zadeklarowana</strong> nie daje się nadpisać
+                <strong>ponowną deklaracją ( nie inną wartośćią to MOŻNA)!</strong>
+            </li>
+            <li>const</li>
+        </ul>
+        <li>Przysłanianie - to mechanizm w JS który sprawia, że zmienna zadeklarowana globalnie lub lokalnie ale z kolejną funkcją
+            (funkcja w funkcji = zasięg lokalny w innym zasięgu lokalnym) w niej jest nadpisywana przez funkcje niższego
+            "rzędu". Jeżeli funkcja "najgłębiej zagnieżdżona" nie ma zmiennej np. a którą chcę wyświetlić -> "sięga" do szerszego
+            zasięgu aż do zmiennej globalnej (jeżeli nie ma innych a i zmienna globalna też ma nazwę "a")</li>
+        <li>Dostępność zmiennych lokalnych i globalnych - globalne zmiene są dostępne wszędzie również w funkcjach; lokalne tylko
+            lokalnie
+        </li>
+        <li>Jak stworzyć zmienną bez słowa kluczowego - przypisując do np. litery określoną wartość (c = "aaa"). Wówczas jeżeli
+            to zrobimy nawet w funkcji to będzie ona dostępna globalnie</li>
+        <li>Czym jest operand - argument - operatory wykonują działania na operandach</li>
+        <li>Wypróbuj w konsoli obiekt opakowujący (new)</li>
+        <li>Różnica między właściwością a metodą? metoda jest to funkcja wykorzystywana w obiekcie zaś właściwość to </li>
+        <li>Uwaga! obiekt opakowujący to mechanizm zamieniający na czas wykonania metody np. "aaa".length potraktowanie stringa
+            jako obiektu</li>
+    </ol>
+    <h3>Dzień 9 Hoisting</h3>
+    <ol>
+        <li>Na czym polega hoisting i jego dwa procesy</li>
+        <li>Uwaga! hoisting dotyczy deklaracji zmiennych i funkcji a nie wyrażeń funkcyjnych!:
+            <br>
+            <li>Uwaga! hoisting dotyczy zmiennej ale TYLKO var!! bez let i conts
+                <br>
+                <b>var name = function()</b>{
+                <br> ciało funkcji
+                <br> };
+                <br> hoistowany w całości będzie będzie zapis:
+                <br> function name(){
+                <br> ciało funkcji
+                <br>};</li>
+            <ul>
+                <li>analiza kodu przez silnik JS - wyszukanie deklaracji funkcji i zmiennych</li>
+                <li>powtórne czytanie kodu wraz z przenoszeniem DEKLARACJI zmiennych BEZ inicjalizacji;
+                    <br>UWAGA! Przeniesienie odbywa sie na początek ZASIĘGU BLOKOWEGO!
+                    <br> UWAGA! FUNKCJE mają najwyższy priorytet niezależnie od ich położenia w kodzie źródłowym</li>
+            </ul>
+            <li>Jaka jest różnica między zasięgiem globalnym i lokalnym</li>
+            <ul>
+                <li>zasięg lokalny - zmienna stworzona za pomocą var wewnątrz funkcji jest dostępna tylko dla niej</li>
+                <li>zasięg globalny - zmienna globalna utworzona poza funkcją jest dostępna w każdym miejscu kodu - również w
+                    funkcji
+                </li>
+            </ul>
+
+    </ol>
+    <h3>Dzień 10 var const i let</h3>
+    <ol>
+        <li>Jeżeli chcę uzyskać zakres blokowy wykorzystuję zmienną utworzoną za pomocą słowa kluczowego </li>
+        <li>W przypadku let i const HOISTING NIE DZIAŁA! </li>
+
+        <li>
+            <b>var</b>
+            <ul>
+                <li>używać tak rzadko jak się da;</li>
+                <li>zakres blokowy: NIE; (zadeklarowana globalnie zmienna bez problemu zostaje nadpisana lokalnie) hoisting:
+                    TAK;
+                </li>
+                <li>ponowna deklaracja: TAK;
+                    <li>dodanie do obiektu Window: TAK</li>
+                    <li>deklaracja bez jednoczesnej inicjalizacji: tak</li>
+            </ul>
+
+            <li>
+                <b>let</b>
+                <ul>
+                    <li>należy używać tak często jak się da - np. pętle</li>
+                    <li>zakres blokowy: tak (w tym dla funkcji)</li>
+                    <li>hoisting: nie</li>
+                    <li>ponowna deklaracja: NIE ale TAK => nadpisanie</li>
+                    <br>czyli jak raz mam let test = x to nie moge znów
+                    <b>let test = y</b> TYLKO
+                    <strong>test = y</strong>;</li>
+            <li>dodanie do obiektu Window: NIE</li>
+            <li>deklaracja bez jednoczesnej inicjalizacji: tak</li>
+            </ul>
+            </li>
+
+            <li>
+                <b>const</b>
+                <ul>
+                    <li>należy używać tak często jak się da - np. pętle</li>
+                    <li>zakres blokowy: tak (w tym dla funkcji)</li>
+                    <li>ponowna deklaracja ani nadpisanie: NIE = BŁĄD!</li>
+                    <li>dodanie do obiektu Window: NIE</li>
+                    <li>zabezpiecza przed zminaą wartość: TAK (OPRÓCZ OBIEKTÓW np. daną tablicę mogę modyfikować, ale tylko ten
+                        określony egzemplarz)</li>
+                    <li>zabezpiecza zmienną: TAK (przed nadpisaniem)</li>
+                    <li>deklaracja bez jednoczesnej inicjalizacji: NIE</li>
+                </ul>
+            </li>
+    </ol>
+    </ol>
+    <h3>Dzień 11 projekt/funckje</h3>
+    <ol>
+        <li>W jaki sposób pobrać zmienną z CSS lub HTML do JS? - </li>
+        <li>AddEventListener - jest to metoda umożliwiająca "nasłuchiwanie" czyli w praktyce reakcję na działanie użytkownika
+            strony internetowej</li>
+        <li>W jaki sposób tworzymy funkcje?
+            <ul>
+                <li>deklaracja funckji:
+                    <br> function name(){ ciało funkcji }
+                </li>
+                <li>wyrażenie funkcyjne
+                    <br> var a = function name(){ return a*b }
+                </li>
+                <li>UWAGA! ES6!!
+                    <br> const nazwa = (a,b) => { return a*b };
+                </li>
+                <li>UWAGA! ciekawostka z ES6!!
+                    <br> zamiast "string"+""+"string" można pisać `${string}${string}`
+                </li>
+            </ul>
+            <li>Tworzenie nowch elemenentów - ceateNewElement</li>
+            <li>Math.random - służy do losowania liczb w zakresie 0 do 1 ale bez 1</li>
+            <li>Callback to funkcja wywołania zwrotnego / to inaczej funkcja przekazana jako wywołanie do innej funkcji czyli
+                funkcji wyższego rzędu (funkcja wyższego rzędu to funkcja zawierająca (przyjmująca jako wywołanie) callback)</li>
+        </li>
+    </ol>
+
+    <h3>Dzień 12 instrukcja warunkowa if</h3>
+    <ol>
+        <li>W instrukcjach warunkowych następuje konwersja do typu prostego Boolien</li>
+        <li>Uwaga!var nie tworzy w instrukcji zakresu lokalnego ale let i const TAK!</li>
+        <li>Skrócony zapis instrukcji warunkowej if?
+            <br> (warunek)?alert("ok!"):alert("zła odp");
+            <br> if(warunek)alert("ok!"); - Tak też można napsiać
+        </li>
+        <li>Tworzenie nowch elemenentów - ceateNewElement</li>
+        <li>Math.random - służy do losowania liczb w zakresie 0 do 1 ale bez 1</li>
+        <li>Z bloku kodu:
+            <br> let a = "jeden";
+            <br> let b = a;
+            <br> i teraz gdy dodam zapis zmeniający wartość zmiennej "a":
+            <br> a = "dwa";
+            <br> sprawdzając:
+            <br> console.log(a);
+            <br> console.log(b);
+            <br> otrzymamy:
+            <br> dwa(czemu nie dwa? Bo w zmienej została zapisana
+            <b>wartosć</b>pierwotna zmiennej)
+            <br> jeden
+            <br>
+        </li>
+        <li>Co jednak się dzieje w przypadku typów referencyjnych czyli obiektów? Tu sprawa jest inna bo w zmiennych już nie
+            przechowujemy obiektów a
+            <b>odwołania = referencje do danego obiektu!</b>
+            <br>
+        </li>
+    </ol>
+    <h3>Dzień 13 typy referencyjne</h3>
+    <ol>
+        <li>Wymień typy proste: string, number, boolean, null i undefined
+            <br>
+            <li>Wymień typy referencyje:
+                <br> obiekt ogólny, funkcja, tablica</li>
+            <li>Typ prosty od referencyjnego różni przede wszystkim specyfika zaspisywania danych w pamięci komputera. W przypadku
+                typów prostych gdy przypisujemy jedną zmienną do drugiej tworzona jest kopia wartości i poźniejsza zmiana
+                pierwotnej zmiennej nie wpływa na przypisaną do niej inna zmienną: a = 4, b = a i zmiana a = 8 nie sprawi,że
+                w b będzie 8.
+                <br>
+            </li>
+            <li>Do kiedy żyje obiekt?
+                <br> do chwili gdy wszystkie jego referencje zostaną usunięte to zjawisko to
+                <b>dereferencja</b>
+            </li>
+            <li>Miejsce w pamięci do krórego prowadzi zmienna to adres, referencja lub wskaźnik
+                <b>obiekt zmiennych</b>.
+                <br>
+            </li>
+            <li>"Podtypy" obiektu ogólnego to:
+                <br> tablica i funkcja.
+            </li>
+            <li>Co to znaczy instancja:
+                <br> jest to obiekt utworzony niejako na bazie obiektu ogólnego; instancja to inaczej mówiąc wersja.
+            </li>
+            <li>Co to jest obiekt ogólny:
+                <br> jest to obiekt na bazie, którego tworzymy instancje; Inaczej to obiekt złożony z par klucz(nazwa/identyfikator):
+                wartość;
+                <br> uwaga! w obiekcie w postaci klucza i wartości można zawrzeć funkcję jako metodę ale i inny obiekt.
+            </li>
+            <li>Jedynym obiektem jaki może być wywołany jest
+                <b>fukcja</b>
+            </li>
+            <li>Tablicę od obiektu ogólnego różni sposób zapisu - tablicę tworzy się za pomocą nawiasów kwadratowych oraz nie
+                wymaga tworzenia par klucz-wartość ponieważ tablica ma własne indeksy numerowane od zera włącznie
+                <br>
+            </li>
+            <li>Sposoby tworzenia obiektów:
+                <ul>
+                    <li> Bezpośrednia instancja obiektu wbudowanego - Object:</li>
+                    <b> myNewObject = new Object();</b>
+                    <br> następnie dodaję mu właściowości:
+                    <br>
+                    <br>
+                    <b> myNewObject.informacja = 'Jestem nowym obiektem Pawła';</b>
+                    <br> dodać można również
+                    <b>metodę</b>:
+                    <br> function mojaFunkcja(){
+                    <br> alert(this.informacja)
+                    <br> };
+                    <br> myNewObject.showInfo = myFunc;
+                    <br>
+                </ul>
+            </li>
+    </ol>
+    <h3>Dzień 14 </h3>
+    <ol>
+        <li>Wymień typy proste: string, number, boolean, null i undefined
+            <br>
+
+
+
+    </ol>
+
+
+
+</body>
+
+</html>
