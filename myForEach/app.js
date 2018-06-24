@@ -8,7 +8,7 @@ nums.forEach(function(num){
 
 myForEach(nums, function(num){
     console.log(num);
-}); here is the crucial thing - we are calling the function in
+});/*  here is the crucial thing - we are calling the function in */
 
 
 
@@ -42,10 +42,12 @@ myForEach(colors, function(){})  //ATTENTION! function() = anonymous function it
 
 (function(){
     console.log("I'm a function!");
-)} //this will not work because this anonymous function was never invoked so what to do? just add prenthessis after so ...}) and ()
+ 
+//this will not work because this anonymous function was never invoked so what to do? just add prenthessis after so ...}) and ()
 myForEach(colors, function(){alert("HI")})  //here our func from example A is the whole: function(){alert("HI")} And this will work
 //But usually we want to alert words from the array and so:
 myForEach(colors, function(color){ // so here we are calling our function myForEach from row number 30
     console.log(color);
-});  //here our func is now:  function(color){
-    // console.log(color);
+});
+})  //here our func is now:  function(color){
+    // console.log(color)
