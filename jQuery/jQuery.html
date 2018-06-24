@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+</head>
+
+<body>
+
+    <h1>jQuery Events</h1>
+    <h1>jQuery Events</h1>
+    <h1>jQuery Events</h1>
+    <div>I'm not empty! ;)</div>
+    <div id="main"></div>
+    <div>Div 1</div>
+    <div class='highlight'>Div 2</div>
+    <div id='third'>Div 3</div>
+    <div class='highlight'>Div 4</div> <br>
+
+    <input type="text" placeholder="Your name">
+    <input type="text" class="myClass" placeholder="My name">
+
+    <button type="submit">This is my button</button>
+
+    <ul>
+        <li>domek</li>
+        <li>Ala</li>
+        <li>Kot</li>
+        <li id='my'>Ela</li>
+        <li>domek</li>
+        <li>Ala</li>
+        <li>Kot</li>
+        <li>Ela</li>
+        <li>domek</li>
+        <li>Ala</li>
+        <li class="only">Kot</li>
+        <li>Ela</li>
+    </ul>
+
+    <div id='theOne' style="background-color: green; width: 50px">Click me!</div>
+    <div>Click too!</div>
+    <div>Click me please!</div>
+    <button type="submit">Hyde them now!</button>
+    <button id="secondOne">Hyde me too!</button>
+
+
+    <script>
+
+        $('#my').css('color','green');
+        
+        let styles = {
+            backgroundColor: 'pink',
+            fontWeight: "bold"
+        };
+        $('.only').css(styles);
+
+        $('ul :first-child').css('border','2px solid black');
+        
+        $('ul :last-child').css({
+            fontSize: '40px',
+            color: 'blue'
+        });   /* we are passing an object here so instead of font-size we write in JS with the camel case */
+        
+        $("<h1>Test append</h1>").appendTo("body");
+        
+        $('ul').find('li').eq(4).css('font-weight','900');
+
+        /* $('div').css('background','purple'); */
+        $('div.highlight').css('width','200px');
+        $('#third').css('border','orange solid 2px');
+        $('div:first-of-type').css('color','red');
+        $('div#main').text('text from jQuery').css('color','green');
+
+        $('img').attr('alt', 'opis zdjęcia'); 
+
+        // $('input').attr('type', 'color');
+
+        $('input').click(()=>{
+            alert("who's this?!");            
+        });
+       
+        $('div:last-of-type').click(()=>{
+            alert("hello it's me!");            
+        });
+
+        $('li:last-of-type').click(function(){
+            $(this).css("background", "white")
+        });
+
+        $('input').keypress((event) =>{
+            if (event.which === 13) {
+                alert("it was enter! wrrr")
+            }
+        })
+
+        /* $('h1').on('click', ()=>{
+            $('h1').css('color', 'purple')
+        }) */
+        $('h1').on('click', function(){
+            $(this).css('color', 'purple')
+        });
+
+        $("input.myClass").on("keypress", function(){
+            console.log('keypressed!!');
+        });
+
+        $('button').on('mouseenter', function(){
+            $(this).css('font-weight', 'bold')
+        });
+        
+        $('button').on('click', function(){
+            $(this).fadeOut(1000);
+            console.log('do it!')
+        });
+
+        /* or This function below will wait untill the fade is over! */
+
+        $('button').on('click', function(){
+        $(this).fadeOut(1000, ()=>{
+            console.log('do it!')
+        });
+        });
+
+        $('button#secondOne').on('click', function(){
+        $(this).fadeToggle(1000, ()=>{
+            console.log('do it!')
+        });
+        });
+
+    </script>
+
+</body>
+
+
+
+</html>
