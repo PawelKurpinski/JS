@@ -49,3 +49,17 @@ module.exports = anagrams;
 //
 //   return charMap;
 // }
+
+
+function checkPalindrome(wordA, wordB) {
+  return checkWord(A) === checkWord(B)
+  }  
+
+function checkWord(string){
+    return string.toLowerCase().replace(/[^\w]/g, '').split('').sort().join('')
+    }
+
+
+function returnInOrder(word) {
+  return word.split('').sort().join('')
+}; returnInOrder ("word")
