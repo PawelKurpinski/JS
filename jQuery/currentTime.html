@@ -23,7 +23,8 @@
             if (minute<10) minute = `0${minute}`;
             let second = today.getSeconds();
             if (second<10) second = `0${second}`;
-            clock = document.getElementById('clock').innerHTML = `<span style='font-size:40px'> Poland (CET): ${hour}:${minute}:${second}</span>`;
+            clock = document.getElementById('clock').innerHTML = `<span style='font-size:40px'> 
+            Poland (CET): ${hour}:${minute}:${second}</span>`;
             
             setTimeout('setTime()', 1000);
         } 
